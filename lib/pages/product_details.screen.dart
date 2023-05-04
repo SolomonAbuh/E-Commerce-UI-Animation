@@ -181,20 +181,39 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen>
                         ),
                       ],
                     ),
+                    spaceV(2.h),
                     SizedBox(
-                      height: 20,
+                      height: 5.h,
                       child: TabBar(
-                          controller: TabController(length: 2, vsync: this),
-                          tabs: [
-                            Tab(
-                              height: 10,
-                              child: Text('about'),
+                        labelColor: Colors.teal,
+                        unselectedLabelColor: Colors.grey,
+                        unselectedLabelStyle:
+                            const TextStyle(color: Colors.grey),
+                        controller: TabController(length: 2, vsync: this),
+                        tabs: const [
+                          Tab(
+                            text: 'About Item',
+                          ),
+                          Tab(text: 'Review')
+                        ],
+                      ),
+                    ),
+                    spaceV(2.h),
+                    Wrap(
+                      children: [
+                        Row(
+                          children: [
+                            Text(
+                              'Brand: ',
+                              style: TextStyle(fontSize: 14.sp),
                             ),
-                            Tab(
-                              height: 10,
-                              child: Text('about'),
-                            )
-                          ]),
+                            Text(
+                              'Palm Angels',
+                              style: TextStyle(fontSize: 14.sp,fontFamily: w600),
+                            ),
+                          ],
+                        )
+                      ],
                     )
                   ],
                 ),
