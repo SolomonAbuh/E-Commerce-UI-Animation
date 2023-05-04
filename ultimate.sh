@@ -22,7 +22,7 @@ while true; do
   git commit -m "$commit_message"
 
   # Wait for 120 seconds before searching for changes again
-  sleep 300
+  sleep 600
 done
 
 # # Initialize an empty variable to store the last modified file path
