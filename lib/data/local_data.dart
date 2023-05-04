@@ -13,7 +13,10 @@ List<TabItemModel> tabItems = [
 
 List<ProductModel> productList = [
   ProductModel(
-    name: '',
+    name: 'KENZO Sailor Varsity Bomber Jacket Midnight Blue Regular Price',
+    price: '22.0',
+    productCategory: 'shirt',
+    rating: '5',
     images: [
     AppAssets.navyBlueJacket,
     AppAssets.navyBlueJacketTwo,
@@ -21,7 +24,21 @@ List<ProductModel> productList = [
     AppAssets.navyBlueJacketFour,
   ]),
   ProductModel(
-    
+    name: 'OFF-WHITE Varsity Hammer Leather Over Bomber Jacket Black/Blue',
+      price: '18.0',
+    productCategory: 'shirt',
+    rating: '5',
+    images: [
+    AppAssets.offWhiteJacket,
+    AppAssets.offWhiteJacketTwo,
+    AppAssets.offWhiteJacketThree,
+    AppAssets.offWhiteJacketFour,
+  ]),
+  ProductModel(
+    name: 'DSQUARED2 Logo Print Padded Jacket Black Regular Price',
+  price: '60.0',
+    productCategory: 'shirt',
+    rating: '3',
     images: [
     AppAssets.dsquaredJacket,
     AppAssets.dsquaredJacketTwo,
@@ -29,7 +46,10 @@ List<ProductModel> productList = [
     AppAssets.dsquaredJacketFour,
   ]),
   ProductModel(
-    
+    name:'PALM ANGELS Upsidedown Palm Sukajan Brown',
+      price: '22.0',
+    productCategory: 'shirt',
+    rating: '5',
     images: [
     AppAssets.palmAngelJacket,
     AppAssets.palmAngelJacketTwo,
@@ -37,7 +57,7 @@ List<ProductModel> productList = [
     AppAssets.palmAngelJacketFour,
   ]),
   ProductModel(
-    
+    name: 'PALM ANGELS Pink Sunset Track Vest Purple/Black'
     images: [
     AppAssets.palmAngelPinkJacket,
     AppAssets.palmAngelPinkJacketTwo,
@@ -45,6 +65,7 @@ List<ProductModel> productList = [
     AppAssets.palmAngelPinkJacketFour,
   ]),
   ProductModel(
+    name: 'STONE ISLAND SHADOW PROJECT Organza Ripstop Bomber Jacket Black',
     
     images: [
     AppAssets.stoneSilverJacket,
