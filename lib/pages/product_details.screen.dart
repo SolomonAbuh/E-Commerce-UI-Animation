@@ -43,8 +43,15 @@ class ProductDetailsScreen extends StatelessWidget {
                     ),
                   )
                       .animate()
-                      .slideY(begin: 1, duration: Duration(milliseconds: 250,))
-                      .fadeIn(begin: 0.1, delay: Duration(milliseconds: 500)),
+                      .slideY(
+                          begin: 10,
+                          duration: const Duration(
+                            milliseconds: 800,
+                          ),
+                          curve: Curves.easeOut)
+                      .fadeIn(
+                          begin: 0.1,
+                          delay: const Duration(milliseconds: 1000)),
                 ),
               ],
             ),
