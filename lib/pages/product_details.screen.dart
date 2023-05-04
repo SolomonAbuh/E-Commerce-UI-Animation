@@ -100,18 +100,28 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
                       ],
                     ),
                     spaceV(2.h),
-                    Text(
-                      widget.model.productCategory,
-                      style: TextStyle(
-                        fontSize: 14.sp,
-                        color: Colors.grey.shade400,
-                      ),
+                    Row(
+                      children: [
+                        SvgPicture.asset(
+                          AppAssets.shopIcon,
+                          color: Colors.grey.shade400,
+                        ),
+                        spaceH(2.w),
+                        Text(
+                          widget.model.productCategory,
+                          style: TextStyle(
+                            fontSize: 14.sp,
+                            color: Colors.grey.shade400,
+                          ),
+                        ),
+                      ],
                     )
                         .animate()
                         .fade(
                           duration: const Duration(milliseconds: 800),
                         )
                         .slideX(),
+                    spaceV(1.h),
                     Text(
                       widget.model.name,
                       style: TextStyle(
@@ -197,10 +207,11 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
                       ],
                     ),
                   ).animate(delay: const Duration(milliseconds: 800)).scale(
-                      duration: const Duration(
-                        milliseconds: 500,
+                        duration: const Duration(
+                          milliseconds: 500,
+                        ),
+                        curve: Curves.easeOut,
                       ),
-                      curve: Curves.easeOut)
                 ],
               ),
             ),
