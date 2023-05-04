@@ -3,6 +3,7 @@ import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:money_point_take_home_assignment/constants/app_assets.dart';
 import 'package:money_point_take_home_assignment/models/product_model.dart';
+import 'package:money_point_take_home_assignment/models/selection_model.dart';
 import 'package:money_point_take_home_assignment/widgets/app_spacer.dart';
 import 'package:sizer/sizer.dart';
 
@@ -19,6 +20,21 @@ class ProductDetailsScreen extends StatefulWidget {
 
 class _ProductDetailsScreenState extends State<ProductDetailsScreen>
     with TickerProviderStateMixin {
+  List<SelectionModel> pictureSelections = [];
+
+  void addPictures(List<String> imageList) {
+    for (var i = 0; i < imageList.length; i++) {
+      pictureSelections
+          .add(SelectionModel(imageList[i], i == 0 ? true : false));
+    }
+  }
+
+  @override
+  void initState() {
+    addPictures(widget.model.images);
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -75,13 +91,19 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen>
                                 Container(
                                   height: 6.h,
                                   width: 6.h,
-                                  decoration: BoxDecoration(boxShadow: [
-                                    BoxShadow(
-                                      blurRadius: 10,
-                                      color: Colors.black.withOpacity(0.2),
-                                      offset: const Offset(0, 10),
-                                    )
-                                  ]),
+                                  decoration: BoxDecoration(
+                                      boxShadow: [
+                                        BoxShadow(
+                                          blurRadius: 10,
+                                          color: Colors.black.withOpacity(0.2),
+                                          offset: const Offset(0, 10),
+                                        )
+                                      ],
+                                      border: Border.all(
+                                          color: pictureSelections[index].active
+                                              ? Colors.teal
+                                              : Colors.transparent,
+                                          width: 2)),
                                   child: ClipRRect(
                                     child: Image.asset(
                                       widget.model.images[index],
@@ -235,7 +257,7 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen>
                                         color: Colors.grey.shade500),
                                   ),
                                   Text(
-                                    'Red',
+                                    widget.model.productCategory,
                                     style: TextStyle(
                                         fontSize: 12.sp,
                                         fontWeight: FontWeight.w600),
