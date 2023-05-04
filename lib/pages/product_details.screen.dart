@@ -199,22 +199,133 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen>
                       ),
                     ),
                     spaceV(2.h),
-                    Wrap(
+                    Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Row(
-                          children: [
-                            Text(
-                              'Brand: ',
-                              style: TextStyle(fontSize: 14.sp),
-                            ),
-                            Text(
-                              'Palm Angels',
-                              style: TextStyle(fontSize: 14.sp,fontFamily: w600),
-                            ),
-                          ],
-                        )
+                        Expanded(
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Row(
+                                mainAxisSize: MainAxisSize.min,
+                                children: [
+                                  Text(
+                                    'Brand: ',
+                                    style: TextStyle(
+                                        fontSize: 12.sp,
+                                        color: Colors.grey.shade500),
+                                  ),
+                                  Text(
+                                    'Palm Angels',
+                                    style: TextStyle(
+                                        fontSize: 12.sp,
+                                        fontWeight: FontWeight.w600),
+                                  ),
+                                ],
+                              ),
+                              spaceV(2.h),
+                              Row(
+                                mainAxisSize: MainAxisSize.min,
+                                children: [
+                                  Text(
+                                    'color: ',
+                                    style: TextStyle(
+                                        fontSize: 12.sp,
+                                        color: Colors.grey.shade500),
+                                  ),
+                                  Text(
+                                    'Red',
+                                    style: TextStyle(
+                                        fontSize: 12.sp,
+                                        fontWeight: FontWeight.w600),
+                                  ),
+                                ],
+                              ),
+                              spaceV(2.h),
+                              Row(
+                                mainAxisSize: MainAxisSize.min,
+                                children: [
+                                  Text(
+                                    'Condition: ',
+                                    style: TextStyle(
+                                        fontSize: 12.sp,
+                                        color: Colors.grey.shade500),
+                                  ),
+                                  Text(
+                                    'New',
+                                    style: TextStyle(
+                                        fontSize: 12.sp,
+                                        fontWeight: FontWeight.w600),
+                                  ),
+                                ],
+                              ),
+                            ],
+                          ),
+                        ),
+                        spaceH(10.w),
+                        Expanded(
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Row(
+                                mainAxisSize: MainAxisSize.min,
+                                children: [
+                                  Text(
+                                    'color: ',
+                                    style: TextStyle(
+                                        fontSize: 12.sp,
+                                        color: Colors.grey.shade500),
+                                  ),
+                                  Text(
+                                    'Red',
+                                    style: TextStyle(
+                                        fontSize: 12.sp,
+                                        fontWeight: FontWeight.w600),
+                                  ),
+                                ],
+                              ),
+                              spaceV(2.h),
+                              Row(
+                                mainAxisSize: MainAxisSize.min,
+                                children: [
+                                  Text(
+                                    'Material: ',
+                                    style: TextStyle(
+                                        fontSize: 12.sp,
+                                        color: Colors.grey.shade500),
+                                  ),
+                                  Text(
+                                    'Cotton',
+                                    style: TextStyle(
+                                        fontSize: 12.sp,
+                                        fontWeight: FontWeight.w600),
+                                  ),
+                                ],
+                              ),
+                              spaceV(2.h),
+                              Row(
+                                mainAxisSize: MainAxisSize.min,
+                                children: [
+                                  Text(
+                                    'Heavy: ',
+                                    style: TextStyle(
+                                        fontSize: 12.sp,
+                                        color: Colors.grey.shade500),
+                                  ),
+                                  Text(
+                                    '200g',
+                                    style: TextStyle(
+                                        fontSize: 12.sp,
+                                        fontWeight: FontWeight.w600),
+                                  ),
+                                ],
+                              ),
+                            ],
+                          ),
+                        ),
                       ],
-                    )
+                    ),
                   ],
                 ),
               ),
