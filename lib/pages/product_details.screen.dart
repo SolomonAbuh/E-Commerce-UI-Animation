@@ -5,6 +5,7 @@ import 'package:money_point_take_home_assignment/constants/app_assets.dart';
 import 'package:money_point_take_home_assignment/models/product_model.dart';
 import 'package:money_point_take_home_assignment/models/selection_model.dart';
 import 'package:money_point_take_home_assignment/widgets/app_spacer.dart';
+import 'package:money_point_take_home_assignment/widgets/product_description.dart';
 import 'package:money_point_take_home_assignment/widgets/product_title.dart';
 import 'package:sizer/sizer.dart';
 import '../widgets/about_items.dart';
@@ -164,9 +165,10 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen>
                     AboutItems(
                       model: widget.model,
                     ),
-                    spaceV(3.h),
-                    const Divider(),
-                    spaceV(3.h),
+                    Divider(
+                      height: 8.h,
+                    ),
+                    ProductDescription(),
                   ],
                 ),
               ),
