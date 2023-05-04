@@ -101,7 +101,7 @@ class _HomePageState extends State<HomePage> {
               // flexibleSpace: HomeCarouselSlider(),
             ),
             SliverPadding(
-              padding: EdgeInsets.symmetric(horizontal: 5.w),
+              padding: EdgeInsets.only(left: 5.w, right: 5.w, bottom: 3.h),
               sliver: SliverGrid.count(
                 childAspectRatio: 0.080.h,
                 crossAxisCount: 2,
