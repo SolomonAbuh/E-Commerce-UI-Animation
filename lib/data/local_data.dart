@@ -12,64 +12,45 @@ List<TabItemModel> tabItems = [
 ];
 
 List<ProductModel> productList = [
-  ProductModel(images: [
+  ProductModel(
+    name: '',
+    images: [
     AppAssets.navyBlueJacket,
     AppAssets.navyBlueJacketTwo,
     AppAssets.navyBlueJacketThree,
     AppAssets.navyBlueJacketFour,
   ]),
-  ProductModel(images: [
+  ProductModel(
+    
+    images: [
     AppAssets.dsquaredJacket,
     AppAssets.dsquaredJacketTwo,
     AppAssets.dsquaredJacketThree,
     AppAssets.dsquaredJacketFour,
   ]),
-  ProductModel(images: [
+  ProductModel(
+    
+    images: [
     AppAssets.palmAngelJacket,
     AppAssets.palmAngelJacketTwo,
     AppAssets.palmAngelJacketThree,
     AppAssets.palmAngelJacketFour,
   ]),
-  ProductModel(images: [
+  ProductModel(
+    
+    images: [
     AppAssets.palmAngelPinkJacket,
     AppAssets.palmAngelPinkJacketTwo,
     AppAssets.palmAngelPinkJacketThree,
     AppAssets.palmAngelPinkJacketFour,
   ]),
-  ProductModel(images: [
+  ProductModel(
+    
+    images: [
     AppAssets.stoneSilverJacket,
     AppAssets.stoneSilverJacketTwo,
     AppAssets.stoneSilverJacketThree,
     AppAssets.stoneSilverJacketFour,
   ]),
-  ProductModel(images: [
-    AppAssets.navyBlueJacket,
-    AppAssets.navyBlueJacketTwo,
-    AppAssets.navyBlueJacketThree,
-    AppAssets.navyBlueJacketFour,
-  ]),
-  ProductModel(images: [
-    AppAssets.dsquaredJacket,
-    AppAssets.dsquaredJacketTwo,
-    AppAssets.dsquaredJacketThree,
-    AppAssets.dsquaredJacketFour,
-  ]),
-  ProductModel(images: [
-    AppAssets.palmAngelJacket,
-    AppAssets.palmAngelJacketTwo,
-    AppAssets.palmAngelJacketThree,
-    AppAssets.palmAngelJacketFour,
-  ]),
-  ProductModel(images: [
-    AppAssets.palmAngelPinkJacket,
-    AppAssets.palmAngelPinkJacketTwo,
-    AppAssets.palmAngelPinkJacketThree,
-    AppAssets.palmAngelPinkJacketFour,
-  ]),
-  ProductModel(images: [
-    AppAssets.stoneSilverJacket,
-    AppAssets.stoneSilverJacketTwo,
-    AppAssets.stoneSilverJacketThree,
-    AppAssets.stoneSilverJacketFour,
-  ]),
+ 
 ];
