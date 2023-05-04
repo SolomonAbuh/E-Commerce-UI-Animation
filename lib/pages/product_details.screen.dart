@@ -41,7 +41,10 @@ class ProductDetailsScreen extends StatelessWidget {
                     child: Image.asset(
                       model.images[0],
                     ),
-                  ).animate().slideY(begin: 50),
+                  )
+                      .animate()
+                      .slideY(begin: 1, duration: Duration(milliseconds: 250,))
+                      .fadeIn(begin: 0.1, delay: Duration(milliseconds: 500)),
                 ),
               ],
             ),
