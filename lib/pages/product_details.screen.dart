@@ -6,6 +6,7 @@ import 'package:money_point_take_home_assignment/models/product_model.dart';
 import 'package:money_point_take_home_assignment/models/selection_model.dart';
 import 'package:money_point_take_home_assignment/widgets/app_spacer.dart';
 import 'package:money_point_take_home_assignment/widgets/product_description.dart';
+import 'package:money_point_take_home_assignment/widgets/product_shipping_info.dart';
 import 'package:money_point_take_home_assignment/widgets/product_title.dart';
 import 'package:sizer/sizer.dart';
 import '../widgets/about_items.dart';
@@ -168,12 +169,13 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen>
                     Divider(height: 5.h, color: Colors.grey.shade500),
                     const ProductDescription(),
                     Divider(height: 5.h, color: Colors.grey.shade500),
+                    const ProductShippingInfo()
                   ],
                 ),
               ),
             ),
           ),
-          const BottomSummary()
+          const BottomSummary(),
         ],
       ),
     );
