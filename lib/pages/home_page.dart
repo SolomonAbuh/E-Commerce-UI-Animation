@@ -37,6 +37,7 @@ class _HomePageState extends State<HomePage> {
 
               toolbarHeight: 10.h,
               collapsedHeight: 16.h,
+      
               pinned: true,
               expandedHeight: 57.h,
               flexibleSpace: FlexibleSpaceBar(

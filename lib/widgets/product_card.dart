@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:money_point_take_home_assignment/widgets/app_spacer.dart';
 import 'package:sizer/sizer.dart';
 
 import '../models/product_model.dart';
@@ -41,6 +42,8 @@ class ProductCard extends StatelessWidget {
               ],
             ),
           ),
+          spaceV(2.h),
+          Text(model.name)
         ],
       ),
     );
