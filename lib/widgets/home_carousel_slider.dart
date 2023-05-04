@@ -22,10 +22,14 @@ class _HomeCarouselSliderState extends State<HomeCarouselSlider> {
   List<Widget> imgList = [
     Stack(
       children: [
-        Image.asset(
-          AppAssets.advertOne,
-          fit: BoxFit.fitHeight,
-          height: 40.h,
+        Positioned(
+           bottom: 0,
+          left: 0,
+          child: Image.asset(
+            AppAssets.advertOne,
+            fit: BoxFit.fitHeight,
+            height: 40.h,
+          ),
         ),
       ],
     ),
