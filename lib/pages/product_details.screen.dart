@@ -5,11 +5,14 @@ import 'package:money_point_take_home_assignment/constants/app_assets.dart';
 import 'package:money_point_take_home_assignment/models/product_model.dart';
 import 'package:money_point_take_home_assignment/models/selection_model.dart';
 import 'package:money_point_take_home_assignment/widgets/app_spacer.dart';
+import 'package:money_point_take_home_assignment/widgets/product_title.dart';
 import 'package:sizer/sizer.dart';
 
 import '../widgets/about_items.dart';
 import '../widgets/bottom_summary.dart';
 import '../widgets/product_details_tab_bar.dart';
+import '../widgets/product_stats.dart';
+import '../widgets/vendor.dart';
 
 class ProductDetailsScreen extends StatefulWidget {
   final ProductModel model;
@@ -151,70 +154,11 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen>
                       ],
                     ),
                     spaceV(2.h),
-                    vendor(widget: widget)
-                        .animate()
-                        .fade(duration: const Duration(milliseconds: 800))
-                        .slideX(),
+                    Vendor(model: widget.model),
                     spaceV(1.h),
-                    Text(
-                      widget.model.name,
-                      style: TextStyle(
-                        fontSize: 18.sp,
-                        fontWeight: FontWeight.w800,
-                      ),
-                    )
-                        .animate(delay: const Duration(milliseconds: 800))
-                        .fade(duration: const Duration(milliseconds: 800)),
+                    ProductTitle(model: widget.model),
                     spaceV(3.h),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Row(
-                          children: [
-                            Icon(
-                              Icons.star_rounded,
-                              color: Colors.amber,
-                              size: 16.sp,
-                            ),
-                            spaceH(2.w),
-                            Text(
-                              '${widget.model.rating} Ratings',
-                              style: TextStyle(
-                                color: Colors.grey.shade500,
-                              ),
-                            )
-                          ],
-                        ),
-                        Container(
-                          height: 8,
-                          width: 8,
-                          decoration: BoxDecoration(
-                            color: Colors.grey.shade500,
-                            shape: BoxShape.circle,
-                          ),
-                        ),
-                        Text(
-                          '2.9k + Reviews',
-                          style: TextStyle(
-                            color: Colors.grey.shade500,
-                          ),
-                        ),
-                        Container(
-                          height: 8,
-                          width: 8,
-                          decoration: BoxDecoration(
-                            color: Colors.grey.shade500,
-                            shape: BoxShape.circle,
-                          ),
-                        ),
-                        Text(
-                          '2.3k + Sold',
-                          style: TextStyle(
-                            color: Colors.grey.shade500,
-                          ),
-                        ),
-                      ],
-                    ),
+                    ProductStats(model: widget.model),
                     spaceV(3.h),
                     const ProductDetailsTabBar(),
                     spaceV(3.h),
@@ -229,35 +173,6 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen>
           const BottomSummary()
         ],
       ),
-    );
-  }
-}
-
-class vendor extends StatelessWidget {
-  const vendor({
-    super.key,
-    required this.widget,
-  });
-
-  final ProductDetailsScreen widget;
-
-  @override
-  Widget build(BuildContext context) {
-    return Row(
-      children: [
-        SvgPicture.asset(
-          AppAssets.shopIcon,
-          color: Colors.grey.shade400,
-        ),
-        spaceH(2.w),
-        Text(
-          widget.model.productCategory,
-          style: TextStyle(
-            fontSize: 14.sp,
-            color: Colors.grey.shade400,
-          ),
-        ),
-      ],
     );
   }
 }
