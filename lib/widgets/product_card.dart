@@ -22,29 +22,38 @@ class ProductCard extends StatelessWidget {
           ),
         ],
       ),
-      child: Column(
-        children: [
-          SizedBox(
-            width: double.infinity,
-            height: 15.h,
-            child: Stack(
-              alignment: Alignment.topCenter,
-              children: [
-                Positioned(
-                  top: 0,
-                  left: 0,
-                  right: 0,
-                  child: Image.asset(
-                    model.images[0],
-                    fit: BoxFit.cover,
+      child: Padding(
+        padding: EdgeInsets.symmetric(horizontal: 2.w),
+        child: Column(
+          children: [
+            SizedBox(
+              width: double.infinity,
+              height: 15.h,
+              child: Stack(
+                alignment: Alignment.topCenter,
+                children: [
+                  Positioned(
+                    top: 0,
+                    left: 0,
+                    right: 0,
+                    child: Image.asset(
+                      model.images[0],
+                      fit: BoxFit.cover,
+                    ),
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
-          ),
-          spaceV(2.h),
-          Text(model.name)
-        ],
+            spaceV(2.h),
+            Text(
+              model.name,
+              maxLines: 2,
+              overflow: TextOverflow.ellipsis,
+              style: TextStyle(
+                  fontSize: 10.sp, fontWeight: FontWeight.w600, height: 1.5),
+            )
+          ],
+        ),
       ),
     );
   }
