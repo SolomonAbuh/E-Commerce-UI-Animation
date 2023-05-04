@@ -118,14 +118,19 @@ class _HomePageState extends State<HomePage> {
                 mainAxisSpacing: 1.5.h,
                 children: List.generate(
                   productList.length,
-                  (index) => ProductCard(
-                    onTap: (){
-                   Navigator.push(
-    context,
-    MaterialPageRoute(builder: (context) => const ProductDetailsScreen(model: productList[0])),
-  );
-                    },
-                    model: productList[index],
+                  (index) => Hero(
+                    tag: 'product_image',
+                    child: ProductCard(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) =>
+                                  ProductDetailsScreen(model: productList[0])),
+                        );
+                      },
+                      model: productList[index],
+                    ),
                   ),
                 ),
               ),
