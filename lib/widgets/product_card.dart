@@ -17,16 +17,15 @@ class ProductCard extends StatelessWidget {
         borderRadius: BorderRadius.circular(8),
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withOpacity(0.07),
-            blurRadius: 10,
-          ),
+              color: Colors.black.withOpacity(0.09),
+              blurRadius: 10,
+              offset: Offset(0, 10)),
         ],
       ),
       child: Padding(
         padding: EdgeInsets.symmetric(horizontal: 2.w, vertical: 1.5.h),
         child: Column(
           children: [
-            
             SizedBox(
               width: double.infinity,
               height: 15.h,
@@ -58,10 +57,22 @@ class ProductCard extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Row(
-                  children: [],
+                  children: [
+                    Icon(
+                      Icons.star_rounded,
+                      color: Colors.amber,
+                      size: 16.sp,
+                    ),
+                    spaceH(0.5.w),
+                    Text(
+                      '${model.rating} | 2,302',
+                      style: TextStyle(
+                          fontSize: 10.sp, color: Colors.grey.shade400),
+                    )
+                  ],
                 ),
                 Text(
-                  '\$ ${model.price}',
+                  '\$${model.price}',
                   style: TextStyle(
                       fontSize: 14.sp,
                       color: Colors.teal,
