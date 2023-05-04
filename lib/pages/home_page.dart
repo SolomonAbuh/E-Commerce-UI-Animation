@@ -34,7 +34,9 @@ class _HomePageState extends State<HomePage> {
             SliverAppBar(
               backgroundColor: Colors.white,
               elevation: 0,
-              title: const SearchBar(),
+              title: const SearchBar()
+                  .animate()
+                  .fadeIn(duration: Duration(milliseconds: 1000)).scale(),
               toolbarHeight: 10.h,
               collapsedHeight: 16.h,
               pinned: true,
@@ -79,7 +81,13 @@ class _HomePageState extends State<HomePage> {
                                           fit: BoxFit.fitHeight,
                                           color: Colors.blueGrey.shade400,
                                         ),
-                                      ).animate().fadeIn().slideX(),
+                                      )
+                                          .animate(
+                                              delay: Duration(
+                                            milliseconds: 400 * index,
+                                          ))
+                                          .fadeIn()
+                                          .slideX(curve: Curves.easeOut),
                                       spaceV(2.h),
                                       Text(
                                         (tabItems[index].title),
