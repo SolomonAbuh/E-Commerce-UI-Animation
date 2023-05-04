@@ -31,52 +31,66 @@ class ProductDetailsScreen extends StatelessWidget {
         ],
       ),
       body: SingleChildScrollView(
-        child: Column(
-          children: [
-            Stack(
-              children: [
-                Center(
-                  child: SizedBox(
-                    height: 40.h,
-                    child: Image.asset(
-                      model.images[0],
-                    ),
-                  )
-                      .animate()
-                      .slideY(
-                          begin: 10,
-                          duration: const Duration(
-                            milliseconds: 800,
-                          ),
-                          curve: Curves.easeOut)
-                      .fadeIn(
-                        begin: 0.1,
-                        delay: const Duration(milliseconds: 600),
-                      )
-                      .moveX(end: 20),
-                ),
-                Column(
-                  children: List.generate(
+        child: Padding(
+          padding: EdgeInsets.symmetric(horizontal: 5.w),
+          child: Column(
+            children: [
+              Stack(
+                children: [
+                  Center(
+                    child: SizedBox(
+                      height: 40.h,
+                      child: Image.asset(
+                        model.images[0],
+                      ),
+                    )
+                        .animate()
+                        .slideY(
+                            begin: 10,
+                            duration: const Duration(
+                              milliseconds: 800,
+                            ),
+                            curve: Curves.easeOut)
+                        .fadeIn(
+                          begin: 0.1,
+                          delay: const Duration(milliseconds: 600),
+                        )
+                        .moveX(end: 30),
+                  ),
+                  Column(
+                    children: List.generate(
                       model.images.length,
                       (index) => Column(
-                            children: [
-                              Container(
-                                height: 8.h,
-                                width: 8.h,
-                                child: ClipRRect(
-                                  child: Image.asset(
-                                    model.images[index],
-                                    fit: BoxFit.cover,
-                                  ),
-                                ),
+                        children: [
+                          Container(
+                            height: 6.h,
+                            width: 6.h,
+                            decoration: BoxDecoration(boxShadow: [
+                              BoxShadow(
+                                blurRadius: 10,
+                                color: Colors.black.withOpacity(0.2),
+                                offset: const Offset(0, 10),
+                              )
+                            ]),
+                            child: ClipRRect(
+                              child: Image.asset(
+                                model.images[index],
+                                fit: BoxFit.cover,
                               ),
-                              spaceV(2.h),
-                            ],
-                          )),
-                )
-              ],
-            ),
-          ],
+                            ),
+                          ),
+                          spaceV(2.h),
+                        ],
+                      )
+                          .animate()
+                          .fadeIn(delay: Duration(milliseconds: 500 * index))
+                          .scale(),
+                    ),
+                  )
+                ],
+              ),
+            ],
+          ),
         ),
       ),
     );
