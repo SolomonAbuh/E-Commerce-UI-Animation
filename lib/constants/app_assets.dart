@@ -11,6 +11,9 @@ abstract class AppAssets {
   static const String receiptIcon = 'assets/icons/receipt.svg';
   static const String walletIcon = 'assets/icons/wallet.svg';
   static const String ticketIcon = 'assets/icons/ticket.svg';
+  static const String homeIcon = 'assets/icons/home.svg';
+  static const String searchIcon = 'assets/icons/search.svg';
+
 
   // assets for images
   static const String advertOne = 'assets/images/ad_one.png';

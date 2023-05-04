@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
@@ -19,26 +20,27 @@ class AppBottomNavBar extends StatelessWidget {
           items: [
             BottomNavigationBarItem(
                 icon: SvgPicture.asset(
-                  AppAssets.coinsIcon,
+                  AppAssets.homeIcon,
+                  height: 20,
                   color: Colors.teal,
                 ),
                 label: 'home'),
             BottomNavigationBarItem(
                 icon: SvgPicture.asset(
                   AppAssets.ticketIcon,
-                  color: Colors.teal,
+                  color: Colors.grey.shade400,
                 ),
                 label: 'home'),
             BottomNavigationBarItem(
                 icon: SvgPicture.asset(
                   AppAssets.walletIcon,
-                  color: Colors.teal,
+                  color: Colors.grey.shade400,
                 ),
                 label: 'home'),
             BottomNavigationBarItem(
                 icon: SvgPicture.asset(
                   AppAssets.gearIcon,
-                  color: Colors.teal,
+                  color: Colors.grey.shade400,
                 ),
                 label: 'home'),
           ]),

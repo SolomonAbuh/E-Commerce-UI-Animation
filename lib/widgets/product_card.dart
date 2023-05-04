@@ -1,0 +1,48 @@
+import 'package:flutter/material.dart';
+import 'package:sizer/sizer.dart';
+
+import '../models/product_model.dart';
+
+class ProductCard extends StatelessWidget {
+  final ProductModel model;
+  const ProductCard({super.key, required this.model});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      height: 35.h,
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(8),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.black.withOpacity(0.07),
+            blurRadius: 10,
+          ),
+        ],
+      ),
+      child: Column(
+        children: [
+          SizedBox(
+            width: double.infinity,
+            height: 15.h,
+            child: Stack(
+              alignment: Alignment.topCenter,
+              children: [
+                Positioned(
+                  top: 0,
+                  left: 0,
+                  right: 0,
+                  child: Image.asset(
+                    model.images[0],
+                    fit: BoxFit.cover,
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
