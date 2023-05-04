@@ -1,10 +1,6 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
-
-import 'package:money_point_take_home_assignment/widgets/app_spacer.dart';
-
 import 'package:sizer/sizer.dart';
-
 import '../constants/app_assets.dart';
 
 class HomeCarouselSlider extends StatefulWidget {
@@ -17,13 +13,12 @@ class HomeCarouselSlider extends StatefulWidget {
 class _HomeCarouselSliderState extends State<HomeCarouselSlider> {
   int _current = 0;
   final CarouselController _controller = CarouselController();
-  CarouselController carouselController = CarouselController();
 
   List<Widget> imgList = [
     Stack(
       children: [
         Positioned(
-           bottom: 0,
+          bottom: 0,
           left: 0,
           child: Image.asset(
             AppAssets.advertOne,
@@ -54,7 +49,7 @@ class _HomeCarouselSliderState extends State<HomeCarouselSlider> {
       SizedBox(
         height: 40.h,
         child: CarouselSlider(
-          carouselController: carouselController,
+          carouselController: _controller,
           items: imgList,
           options: CarouselOptions(
               height: 40.h,
