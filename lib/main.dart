@@ -6,7 +6,6 @@ import 'package:sizer/sizer.dart';
 import 'data/local_data.dart';
 
 void main() {
-
   runApp(const MyApp());
 }
 
