@@ -6,6 +6,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:sizer/sizer.dart';
 
 import '../constants/app_assets.dart';
+import '../constants/colors.dart';
 
 class BottomSummary extends StatelessWidget {
   const BottomSummary({super.key});
@@ -47,7 +48,7 @@ class BottomSummary extends StatelessWidget {
                     width: 15.w,
                     height: 5.5.h,
                     decoration: BoxDecoration(
-                      color: Colors.teal.shade300,
+                      color: AppColors.primary,
                       borderRadius: const BorderRadius.only(
                         topLeft: Radius.circular(5),
                         bottomLeft: Radius.circular(5),
@@ -62,9 +63,9 @@ class BottomSummary extends StatelessWidget {
                   Container(
                     width: 25.w,
                     height: 5.5.h,
-                    decoration: const BoxDecoration(
-                      color: Color.fromARGB(255, 0, 23, 80),
-                      borderRadius: BorderRadius.only(
+                    decoration: BoxDecoration(
+                      color: AppColors.textColor,
+                      borderRadius: const BorderRadius.only(
                         topRight: Radius.circular(5),
                         bottomRight: Radius.circular(5),
                       ),

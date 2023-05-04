@@ -130,7 +130,7 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen>
                                       borderRadius: BorderRadius.circular(8),
                                       border: Border.all(
                                         color: pictureSelections[index].active
-                                            ? Colors.teal
+                                            ? AppColors.primary
                                             : Colors.transparent,
                                         width: 3,
                                       ),
