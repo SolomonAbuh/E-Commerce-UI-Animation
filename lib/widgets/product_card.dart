@@ -54,6 +54,8 @@ class ProductCard extends StatelessWidget {
             ),
             const Spacer(),
             
+
+
           ],
         ),
       ),
