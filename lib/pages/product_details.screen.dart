@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-
 import 'package:money_point_take_home_assignment/models/product_model.dart';
 
 class ProductDetailsScreen extends StatelessWidget {
@@ -13,12 +12,13 @@ class ProductDetailsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        backgroundColor: Colors.white,
+        iconTheme: ,
+      ),
       body: SingleChildScrollView(
         child: Column(
-          children: [
-            Hero(tag: 'product_image', child: Image.asset(model.images[0]))
-          ],
+          children: [Image.asset(model.images[0])],
         ),
       ),
     );
