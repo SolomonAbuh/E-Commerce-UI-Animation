@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:money_point_take_home_assignment/models/product_model.dart';
 import 'package:sizer/sizer.dart';
 
+import '../constants/colors.dart';
 import 'app_spacer.dart';
 
 class AboutItems extends StatelessWidget {
@@ -25,7 +26,7 @@ class AboutItems extends StatelessWidget {
                   Text(
                     'Brand: ',
                     style:
-                        TextStyle(fontSize: 12.sp, color: Colors.grey.shade500),
+                        TextStyle(fontSize: 12.sp, color: AppColors.greyLight),
                   ),
                   Text(
                     'Palm Angels',
@@ -41,7 +42,7 @@ class AboutItems extends StatelessWidget {
                   Text(
                     'color: ',
                     style:
-                        TextStyle(fontSize: 12.sp, color: Colors.grey.shade500),
+                        TextStyle(fontSize: 12.sp, color: AppColors.greyLight),
                   ),
                   Text(
                     model.productCategory,
@@ -57,7 +58,7 @@ class AboutItems extends StatelessWidget {
                   Text(
                     'Condition: ',
                     style:
-                        TextStyle(fontSize: 12.sp, color: Colors.grey.shade500),
+                        TextStyle(fontSize: 12.sp, color: AppColors.greyLight),
                   ),
                   Text(
                     'New',
@@ -80,7 +81,7 @@ class AboutItems extends StatelessWidget {
                   Text(
                     'color: ',
                     style:
-                        TextStyle(fontSize: 12.sp, color: Colors.grey.shade500),
+                        TextStyle(fontSize: 12.sp, color: AppColors.greyLight),
                   ),
                   Text(
                     'Red',
@@ -96,7 +97,7 @@ class AboutItems extends StatelessWidget {
                   Text(
                     'Material: ',
                     style:
-                        TextStyle(fontSize: 12.sp, color: Colors.grey.shade500),
+                        TextStyle(fontSize: 12.sp, color: AppColors.greyLight),
                   ),
                   Text(
                     'Cotton',
@@ -112,7 +113,7 @@ class AboutItems extends StatelessWidget {
                   Text(
                     'Heavy: ',
                     style:
-                        TextStyle(fontSize: 12.sp, color: Colors.grey.shade500),
+                        TextStyle(fontSize: 12.sp, color: AppColors.greyLight),
                   ),
                   Text(
                     '200g',

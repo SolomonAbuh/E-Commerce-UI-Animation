@@ -9,6 +9,7 @@ import 'package:money_point_take_home_assignment/widgets/product_description.dar
 import 'package:money_point_take_home_assignment/widgets/product_shipping_info.dart';
 import 'package:money_point_take_home_assignment/widgets/product_title.dart';
 import 'package:sizer/sizer.dart';
+import '../constants/colors.dart';
 import '../widgets/about_items.dart';
 import '../widgets/bottom_summary.dart';
 import '../widgets/product_details_tab_bar.dart';
@@ -166,9 +167,9 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen>
                     AboutItems(
                       model: widget.model,
                     ),
-                    Divider(height: 5.h, color: Colors.grey.shade500),
+                    Divider(height: 5.h, color: AppColors.greyLight),
                     const ProductDescription(),
-                    Divider(height: 5.h, color: Colors.grey.shade500),
+                    Divider(height: 5.h, color: AppColors.greyLight),
                     const ProductShippingInfo()
                   ],
                 ),

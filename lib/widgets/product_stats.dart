@@ -4,6 +4,7 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:money_point_take_home_assignment/models/product_model.dart';
 import 'package:sizer/sizer.dart';
 
+import '../constants/colors.dart';
 import 'app_spacer.dart';
 
 class ProductStats extends StatelessWidget {
@@ -26,7 +27,7 @@ class ProductStats extends StatelessWidget {
             Text(
               '${model.rating} Ratings',
               style: TextStyle(
-                color: Colors.grey.shade500,
+                color: AppColors.greyLight,
               ),
             )
           ],
@@ -35,28 +36,28 @@ class ProductStats extends StatelessWidget {
           height: 8,
           width: 8,
           decoration: BoxDecoration(
-            color: Colors.grey.shade500,
+            color: AppColors.greyLight,
             shape: BoxShape.circle,
           ),
         ),
         Text(
           '2.9k + Reviews',
           style: TextStyle(
-            color: Colors.grey.shade500,
+            color: AppColors.greyLight,
           ),
         ),
         Container(
           height: 8,
           width: 8,
           decoration: BoxDecoration(
-            color: Colors.grey.shade500,
+            color: AppColors.greyLight,
             shape: BoxShape.circle,
           ),
         ),
         Text(
           '2.3k + Sold',
           style: TextStyle(
-            color: Colors.grey.shade500,
+            color: AppColors.greyLight,
           ),
         ),
       ],

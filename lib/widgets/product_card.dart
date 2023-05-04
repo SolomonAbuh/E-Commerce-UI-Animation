@@ -3,6 +3,7 @@ import 'package:sizer/sizer.dart';
 
 import 'package:money_point_take_home_assignment/widgets/app_spacer.dart';
 
+import '../constants/colors.dart';
 import '../models/product_model.dart';
 
 class ProductCard extends StatelessWidget {
@@ -57,7 +58,7 @@ class ProductCard extends StatelessWidget {
                 alignment: Alignment.centerLeft,
                 child: Text(
                   model.productCategory,
-                  style: TextStyle(fontSize: 8.sp, color: Colors.grey.shade400),
+                  style: TextStyle(fontSize: 8.sp, color: AppColors.greyLight),
                 ),
               ),
               spaceV(0.5.h),
@@ -83,7 +84,7 @@ class ProductCard extends StatelessWidget {
                       Text(
                         '${model.rating} | 2,302',
                         style: TextStyle(
-                            fontSize: 10.sp, color: Colors.grey.shade400),
+                            fontSize: 10.sp, color: AppColors.greyLight),
                       )
                     ],
                   ),
