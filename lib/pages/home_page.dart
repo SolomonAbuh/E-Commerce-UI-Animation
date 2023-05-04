@@ -123,8 +123,8 @@ class _HomePageState extends State<HomePage> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) =>
-                                ProductDetailsScreen(model: productList[0])),
+                            builder: (context) => ProductDetailsScreen(
+                                model: productList[index])),
                       );
                     },
                     model: productList[index],
