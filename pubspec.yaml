@@ -1,0 +1,53 @@
+name: money_point_take_home_assignment
+description: A new Flutter project.
+
+publish_to: "none"
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.19.0-146.2.beta <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.2
+  flutter_svg: ^1.1.6
+  sizer: ^2.0.15
+  flutter_native_splash: ^2.2.18
+  smooth_page_indicator: ^1.1.0
+  carousel_slider: ^4.2.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^2.0.0
+flutter_native_splash:
+  color: "#FFFFFF"
+  image: assets/images/logo.png
+  branding: assets/images/branding.png
+  image_dark: assets/images/logo.png
+  branding_dark: assets/images/branding.png
+
+  android_12:
+    image: assets/images/logo.png
+    icon_background_color: "#FFFFFF"
+    image_dark: assets/images/logo.png
+    icon_background_color_dark: "#FFFFFF"
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/images/
+    - assets/icons/
+
+  fonts:
+    - family: Manti Sans
+      fonts:
+        - asset: assets/fonts/manti_sans/Manti Sans Black Demo.otf
+        - asset: assets/fonts/manti_sans/Manti Sans Bold Demo.otf
+        - asset: assets/fonts/manti_sans/Manti Sans Fixed Demo.otf
+        - asset: assets/fonts/manti_sans/Manti Sans Light Demo.otf
+        - asset: assets/fonts/manti_sans/Manti Sans Regular Demo.otf
