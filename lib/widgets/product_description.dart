@@ -58,7 +58,12 @@ class _ProductDescriptionState extends State<ProductDescription> {
                   Padding(
                     padding: EdgeInsets.only(left: 5.w),
                     child: Text(
-                        flag ? ("$firstHalf...") : (firstHalf + secondHalf)),
+                      flag ? ("$firstHalf...") : (firstHalf + secondHalf),
+                      style: TextStyle(
+                        fontSize: 12.sp,
+                        color: Colors.grey.shade500,
+                      ),
+                    ),
                   ),
                   spaceV(3.h),
                   InkWell(
