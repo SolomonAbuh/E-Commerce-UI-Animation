@@ -23,9 +23,10 @@ class ProductCard extends StatelessWidget {
         ],
       ),
       child: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 2.w),
+        padding: EdgeInsets.symmetric(horizontal: 2.w, vertical: 1.5.h),
         child: Column(
           children: [
+            
             SizedBox(
               width: double.infinity,
               height: 15.h,
@@ -54,6 +55,7 @@ class ProductCard extends StatelessWidget {
             ),
             const Spacer(),
             Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Row(
                   children: [],
