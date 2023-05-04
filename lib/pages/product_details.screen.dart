@@ -17,7 +17,8 @@ class ProductDetailsScreen extends StatefulWidget {
   State<ProductDetailsScreen> createState() => _ProductDetailsScreenState();
 }
 
-class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
+class _ProductDetailsScreenState extends State<ProductDetailsScreen>
+    with TickerProviderStateMixin {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -130,7 +131,7 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
                     )
                         .animate(delay: const Duration(milliseconds: 800))
                         .fade(duration: const Duration(milliseconds: 800)),
-                    spaceV(1.h),
+                    spaceV(2.h),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -179,6 +180,21 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
                           ),
                         ),
                       ],
+                    ),
+                    SizedBox(
+                      height: 20,
+                      child: TabBar(
+                          controller: TabController(length: 2, vsync: this),
+                          tabs: [
+                            Tab(
+                              height: 10,
+                              child: Text('about'),
+                            ),
+                            Tab(
+                              height: 10,
+                              child: Text('about'),
+                            )
+                          ]),
                     )
                   ],
                 ),
