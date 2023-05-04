@@ -50,9 +50,30 @@ class ProductDetailsScreen extends StatelessWidget {
                           ),
                           curve: Curves.easeOut)
                       .fadeIn(
-                          begin: 0.1,
-                          delay: const Duration(milliseconds: 1000)),
+                        begin: 0.1,
+                        delay: const Duration(milliseconds: 600),
+                      )
+                      .moveX(end: 20),
                 ),
+                Column(
+                  children: List.generate(
+                      model.images.length,
+                      (index) => Column(
+                            children: [
+                              Container(
+                                height: 8.h,
+                                width: 8.h,
+                                child: ClipRRect(
+                                  child: Image.asset(
+                                    model.images[index],
+                                    fit: BoxFit.cover,
+                                  ),
+                                ),
+                              ),
+                              spaceV(2.h),
+                            ],
+                          )),
+                )
               ],
             ),
           ],
