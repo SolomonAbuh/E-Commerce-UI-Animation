@@ -4,6 +4,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:money_point_take_home_assignment/constants/app_assets.dart';
+import 'package:money_point_take_home_assignment/pages/product_details.screen.dart';
 import 'package:money_point_take_home_assignment/widgets/app_spacer.dart';
 import 'package:money_point_take_home_assignment/widgets/home_carousel_slider.dart';
 import 'package:money_point_take_home_assignment/widgets/product_card.dart';
@@ -118,6 +119,12 @@ class _HomePageState extends State<HomePage> {
                 children: List.generate(
                   productList.length,
                   (index) => ProductCard(
+                    onTap: (){
+                   Navigator.push(
+    context,
+    MaterialPageRoute(builder: (context) => const ProductDetailsScreen(model: productList[0])),
+  );
+                    },
                     model: productList[index],
                   ),
                 ),
