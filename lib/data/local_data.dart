@@ -79,3 +79,13 @@ List<ProductModel> productList = [
         AppAssets.stoneSilverJacketFour,
       ]),
 ];
+
+final   List allAsset = [
+  ///tabbar
+      'images/tabbar/tabar_personal.png',
+      'images/tabbar/tabar_personal_slt.png',
+      'images/tabbar/tabar_home.png',
+      'images/tabbar/tabar_home_slt.png',
+      'images/...'
+      'images/...'
+}
