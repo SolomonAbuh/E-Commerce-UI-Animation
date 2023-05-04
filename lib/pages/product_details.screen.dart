@@ -163,7 +163,10 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen>
                     spaceV(3.h),
                     AboutItems(
                       model: widget.model,
-                    )
+                    ),
+                    spaceV(3.h),
+                    const Divider(),
+                    spaceV(3.h),
                   ],
                 ),
               ),
