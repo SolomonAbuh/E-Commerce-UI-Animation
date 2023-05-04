@@ -119,7 +119,7 @@ class _HomePageState extends State<HomePage> {
                   productList.length,
                   (index) => ProductCard(
                     model: productList[index],
-                  ).animate().sc,
+                  ),
                 ),
               ),
             )
