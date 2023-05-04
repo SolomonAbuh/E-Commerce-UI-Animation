@@ -36,19 +36,26 @@ class ProductCard extends StatelessWidget {
                     top: 0,
                     left: 0,
                     right: 0,
-                    child: Image.asset(
-                      model.images[0],
-                      fit: BoxFit.cover,
+                    child: Hero(
+                      tag: 'product_image',
+                      child: Image.asset(
+                        model.images[0],
+                        fit: BoxFit.cover,
+                      ),
                     ),
                   ),
                 ],
               ),
             ),
-            spaceV(2.h),
-            Text(
-              'model.',
-              style: TextStyle(fontSize: 8.sp, color: Colors.grey.shade400),
+            spaceV(0.5.h),
+            Align(
+              alignment: Alignment.centerLeft,
+              child: Text(
+                model.productCategory,
+                style: TextStyle(fontSize: 8.sp, color: Colors.grey.shade400),
+              ),
             ),
+            spaceV(0.5.h),
             Text(
               model.name,
               maxLines: 2,
