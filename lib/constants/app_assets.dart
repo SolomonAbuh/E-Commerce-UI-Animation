@@ -56,7 +56,7 @@ abstract class AppAssets {
   static const String stoneSilverJacket =
       'assets/images/stone_silver_jacket.jpeg';
   static const String stoneSilverJacketTwo =
-      'assets/images/stone_silver_jacket_tro.jpeg';
+      'assets/images/stone_silver_jacket_two.jpeg';
   static const String stoneSilverJacketThree =
       'assets/images/stone_silver_jacket_three.jpeg';
   static const String stoneSilverJacketFour =

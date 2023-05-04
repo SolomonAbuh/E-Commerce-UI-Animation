@@ -36,11 +36,9 @@ class ProductCard extends StatelessWidget {
                     top: 0,
                     left: 0,
                     right: 0,
-                    child: FadeInImage(
-                      placeholder: MemoryImage(kTransparentImage),
-                      image: AssetImage(
-                        model.images[0],
-                      ),
+                    child: Image.asset(
+                      model.images[0],
+                      fit: BoxFit.cover,
                     ),
                   ),
                 ],
