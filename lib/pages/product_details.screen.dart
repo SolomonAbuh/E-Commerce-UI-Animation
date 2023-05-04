@@ -7,7 +7,6 @@ import 'package:money_point_take_home_assignment/models/selection_model.dart';
 import 'package:money_point_take_home_assignment/widgets/app_spacer.dart';
 import 'package:money_point_take_home_assignment/widgets/product_title.dart';
 import 'package:sizer/sizer.dart';
-
 import '../widgets/about_items.dart';
 import '../widgets/bottom_summary.dart';
 import '../widgets/product_details_tab_bar.dart';
