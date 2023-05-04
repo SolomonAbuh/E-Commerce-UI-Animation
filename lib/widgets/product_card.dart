@@ -61,7 +61,9 @@ class ProductCard extends StatelessWidget {
                 Text(
                   '\$ ${model.price}',
                   style: TextStyle(
-                      color: Colors.teal, fontWeight: FontWeight.w600),
+                      fontSize: 14.sp,
+                      color: Colors.teal,
+                      fontWeight: FontWeight.w600),
                 )
               ],
             )

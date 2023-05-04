@@ -18,6 +18,7 @@ dependencies:
   flutter_native_splash: ^2.2.18
   smooth_page_indicator: ^1.1.0
   carousel_slider: ^4.2.1
+  google_fonts: ^4.0.4
 
 dev_dependencies:
   flutter_test:
@@ -43,11 +44,3 @@ flutter:
     - assets/images/
     - assets/icons/
 
-  fonts:
-    - family: Manti Sans
-      fonts:
-        - asset: assets/fonts/manti_sans/Manti Sans Black Demo.otf
-        - asset: assets/fonts/manti_sans/Manti Sans Bold Demo.otf
-        - asset: assets/fonts/manti_sans/Manti Sans Fixed Demo.otf
-        - asset: assets/fonts/manti_sans/Manti Sans Light Demo.otf
-        - asset: assets/fonts/manti_sans/Manti Sans Regular Demo.otf

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:money_point_take_home_assignment/pages/home_page.dart';
 import 'package:sizer/sizer.dart';
 
@@ -15,7 +16,9 @@ class MyApp extends StatelessWidget {
       builder: (context, orientation, deviceType) => MaterialApp(
         title: 'Flutter Demo',
         debugShowCheckedModeBanner: false,
-        theme: ThemeData(primarySwatch: Colors.teal, fontFamily: 'Poppins'),
+        theme: ThemeData(
+            primarySwatch: Colors.teal,
+            textTheme: GoogleFonts.poppinsTextTheme()),
         home: const HomePage(),
       ),
     );
