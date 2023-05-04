@@ -7,6 +7,10 @@ import 'package:money_point_take_home_assignment/models/selection_model.dart';
 import 'package:money_point_take_home_assignment/widgets/app_spacer.dart';
 import 'package:sizer/sizer.dart';
 
+import '../widgets/about_items.dart';
+import '../widgets/bottom_summary.dart';
+import '../widgets/product_details_tab_bar.dart';
+
 class ProductDetailsScreen extends StatefulWidget {
   final ProductModel model;
   const ProductDetailsScreen({
@@ -147,22 +151,7 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen>
                       ],
                     ),
                     spaceV(2.h),
-                    Row(
-                      children: [
-                        SvgPicture.asset(
-                          AppAssets.shopIcon,
-                          color: Colors.grey.shade400,
-                        ),
-                        spaceH(2.w),
-                        Text(
-                          widget.model.productCategory,
-                          style: TextStyle(
-                            fontSize: 14.sp,
-                            color: Colors.grey.shade400,
-                          ),
-                        ),
-                      ],
-                    )
+                    vendor(widget: widget)
                         .animate()
                         .fade(duration: const Duration(milliseconds: 800))
                         .slideX(),
@@ -176,7 +165,7 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen>
                     )
                         .animate(delay: const Duration(milliseconds: 800))
                         .fade(duration: const Duration(milliseconds: 800)),
-                    spaceV(2.h),
+                    spaceV(3.h),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -226,234 +215,49 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen>
                         ),
                       ],
                     ),
-                    spaceV(2.h),
-                    SizedBox(
-                      height: 5.h,
-                      child: TabBar(
-                        labelColor: Colors.teal,
-                        unselectedLabelColor: Colors.grey,
-                        unselectedLabelStyle:
-                            const TextStyle(color: Colors.grey),
-                        controller: TabController(length: 2, vsync: this),
-                        tabs: const [
-                          Tab(
-                            text: 'About Item',
-                          ),
-                          Tab(text: 'Review')
-                        ],
-                      ),
-                    ),
-                    spaceV(2.5.h),
-                    Row(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Expanded(
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Row(
-                                mainAxisSize: MainAxisSize.min,
-                                children: [
-                                  Text(
-                                    'Brand: ',
-                                    style: TextStyle(
-                                        fontSize: 12.sp,
-                                        color: Colors.grey.shade500),
-                                  ),
-                                  Text(
-                                    'Palm Angels',
-                                    style: TextStyle(
-                                        fontSize: 12.sp,
-                                        fontWeight: FontWeight.w600),
-                                  ),
-                                ],
-                              ),
-                              spaceV(2.h),
-                              Row(
-                                mainAxisSize: MainAxisSize.min,
-                                children: [
-                                  Text(
-                                    'color: ',
-                                    style: TextStyle(
-                                        fontSize: 12.sp,
-                                        color: Colors.grey.shade500),
-                                  ),
-                                  Text(
-                                    widget.model.productCategory,
-                                    style: TextStyle(
-                                        fontSize: 12.sp,
-                                        fontWeight: FontWeight.w600),
-                                  ),
-                                ],
-                              ),
-                              spaceV(2.h),
-                              Row(
-                                mainAxisSize: MainAxisSize.min,
-                                children: [
-                                  Text(
-                                    'Condition: ',
-                                    style: TextStyle(
-                                        fontSize: 12.sp,
-                                        color: Colors.grey.shade500),
-                                  ),
-                                  Text(
-                                    'New',
-                                    style: TextStyle(
-                                        fontSize: 12.sp,
-                                        fontWeight: FontWeight.w600),
-                                  ),
-                                ],
-                              ),
-                            ],
-                          ),
-                        ),
-                        spaceH(10.w),
-                        Expanded(
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Row(
-                                mainAxisSize: MainAxisSize.min,
-                                children: [
-                                  Text(
-                                    'color: ',
-                                    style: TextStyle(
-                                        fontSize: 12.sp,
-                                        color: Colors.grey.shade500),
-                                  ),
-                                  Text(
-                                    'Red',
-                                    style: TextStyle(
-                                        fontSize: 12.sp,
-                                        fontWeight: FontWeight.w600),
-                                  ),
-                                ],
-                              ),
-                              spaceV(2.h),
-                              Row(
-                                mainAxisSize: MainAxisSize.min,
-                                children: [
-                                  Text(
-                                    'Material: ',
-                                    style: TextStyle(
-                                        fontSize: 12.sp,
-                                        color: Colors.grey.shade500),
-                                  ),
-                                  Text(
-                                    'Cotton',
-                                    style: TextStyle(
-                                        fontSize: 12.sp,
-                                        fontWeight: FontWeight.w600),
-                                  ),
-                                ],
-                              ),
-                              spaceV(2.h),
-                              Row(
-                                mainAxisSize: MainAxisSize.min,
-                                children: [
-                                  Text(
-                                    'Heavy: ',
-                                    style: TextStyle(
-                                        fontSize: 12.sp,
-                                        color: Colors.grey.shade500),
-                                  ),
-                                  Text(
-                                    '200g',
-                                    style: TextStyle(
-                                        fontSize: 12.sp,
-                                        fontWeight: FontWeight.w600),
-                                  ),
-                                ],
-                              ),
-                            ],
-                          ),
-                        ),
-                      ],
-                    ),
+                    spaceV(3.h),
+                    const ProductDetailsTabBar(),
+                    spaceV(3.h),
+                    AboutItems(
+                      model: widget.model,
+                    )
                   ],
                 ),
               ),
             ),
           ),
-          SafeArea(
-            top: false,
-            child: Container(
-              padding: EdgeInsets.symmetric(horizontal: 5.w),
-              height: 8.h,
-              decoration: BoxDecoration(
-                color: Colors.white,
-                boxShadow: [
-                  BoxShadow(
-                    blurRadius: 20,
-                    color: Colors.black.withOpacity(0.01),
-                    offset: const Offset(0, -8),
-                  ),
-                ],
-              ),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  const Text(''),
-                  Container(
-                    decoration: BoxDecoration(
-                      boxShadow: [
-                        BoxShadow(
-                          blurRadius: 10,
-                          color: Colors.black.withOpacity(0.1),
-                          offset: const Offset(0, 10),
-                        ),
-                      ],
-                    ),
-                    child: Row(
-                      children: [
-                        Container(
-                          width: 15.w,
-                          height: 5.5.h,
-                          decoration: BoxDecoration(
-                            color: Colors.teal.shade300,
-                            borderRadius: const BorderRadius.only(
-                              topLeft: Radius.circular(5),
-                              bottomLeft: Radius.circular(5),
-                            ),
-                          ),
-                          child: Center(
-                              child: SvgPicture.asset(
-                            AppAssets.shoppingBagIcon,
-                            color: Colors.white,
-                          )),
-                        ),
-                        Container(
-                          width: 25.w,
-                          height: 5.5.h,
-                          decoration: const BoxDecoration(
-                            color: Color.fromARGB(255, 0, 23, 80),
-                            borderRadius: BorderRadius.only(
-                              topRight: Radius.circular(5),
-                              bottomRight: Radius.circular(5),
-                            ),
-                          ),
-                          child: const Center(
-                            child: Text(
-                              'Buy Now',
-                              style: TextStyle(color: Colors.white),
-                            ),
-                          ),
-                        )
-                      ],
-                    ),
-                  ).animate(delay: const Duration(milliseconds: 800)).scale(
-                        duration: const Duration(
-                          milliseconds: 500,
-                        ),
-                        curve: Curves.easeOut,
-                      ),
-                ],
-              ),
-            ),
-          )
+          const BottomSummary()
         ],
       ),
+    );
+  }
+}
+
+class vendor extends StatelessWidget {
+  const vendor({
+    super.key,
+    required this.widget,
+  });
+
+  final ProductDetailsScreen widget;
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      children: [
+        SvgPicture.asset(
+          AppAssets.shopIcon,
+          color: Colors.grey.shade400,
+        ),
+        spaceH(2.w),
+        Text(
+          widget.model.productCategory,
+          style: TextStyle(
+            fontSize: 14.sp,
+            color: Colors.grey.shade400,
+          ),
+        ),
+      ],
     );
   }
 }
