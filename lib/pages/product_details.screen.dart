@@ -165,10 +165,9 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen>
                     AboutItems(
                       model: widget.model,
                     ),
-                    Divider(
-                      height: 8.h,
-                    ),
-                    ProductDescription(),
+                    Divider(height: 5.h, color: Colors.grey.shade500),
+                    const ProductDescription(),
+                    Divider(height: 5.h, color: Colors.grey.shade500),
                   ],
                 ),
               ),
