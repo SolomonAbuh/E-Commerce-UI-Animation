@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
       builder: (context, orientation, deviceType) => MaterialApp(
         title: 'Flutter Demo',
         debugShowCheckedModeBanner: false,
-        theme: ThemeData(primarySwatch: Colors.teal, fontFamily: 'Manti Sans'),
+        theme: ThemeData(primarySwatch: Colors.teal, fontFamily: 'Poppins'),
         home: const HomePage(),
       ),
     );

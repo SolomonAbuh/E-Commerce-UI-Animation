@@ -53,9 +53,18 @@ class ProductCard extends StatelessWidget {
                   fontSize: 10.sp, fontWeight: FontWeight.w600, height: 1.5),
             ),
             const Spacer(),
-            
-
-
+            Row(
+              children: [
+                Row(
+                  children: [],
+                ),
+                Text(
+                  '\$ ${model.price}',
+                  style: TextStyle(
+                      color: Colors.teal, fontWeight: FontWeight.w600),
+                )
+              ],
+            )
           ],
         ),
       ),
