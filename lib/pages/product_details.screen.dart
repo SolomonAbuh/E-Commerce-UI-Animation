@@ -21,6 +21,7 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: AppBar(
         backgroundColor: Colors.white,
         iconTheme: const IconThemeData(color: Colors.black),
@@ -117,9 +118,7 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
                       ],
                     )
                         .animate()
-                        .fade(
-                          duration: const Duration(milliseconds: 800),
-                        )
+                        .fade(duration: const Duration(milliseconds: 800))
                         .slideX(),
                     spaceV(1.h),
                     Text(
@@ -129,12 +128,58 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
                         fontWeight: FontWeight.w800,
                       ),
                     )
-                        .animate(
-                          delay: const Duration(milliseconds: 800),
-                        )
-                        .fade(
-                          duration: const Duration(milliseconds: 800),
-                        )
+                        .animate(delay: const Duration(milliseconds: 800))
+                        .fade(duration: const Duration(milliseconds: 800)),
+                    spaceV(1.h),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Row(
+                          children: [
+                            Icon(
+                              Icons.star_rounded,
+                              color: Colors.amber,
+                              size: 16.sp,
+                            ),
+                            spaceH(2.w),
+                            Text(
+                              '${widget.model.rating} Ratings',
+                              style: TextStyle(
+                                color: Colors.grey.shade500,
+                              ),
+                            )
+                          ],
+                        ),
+                        Container(
+                          height: 8,
+                          width: 8,
+                          decoration: BoxDecoration(
+                            color: Colors.grey.shade500,
+                            shape: BoxShape.circle,
+                          ),
+                        ),
+                        Text(
+                          '2.9k + Reviews',
+                          style: TextStyle(
+                            color: Colors.grey.shade500,
+                          ),
+                        ),
+                        Container(
+                          height: 8,
+                          width: 8,
+                          decoration: BoxDecoration(
+                            color: Colors.grey.shade500,
+                            shape: BoxShape.circle,
+                          ),
+                        ),
+                        Text(
+                          '2.3k + Sold',
+                          style: TextStyle(
+                            color: Colors.grey.shade500,
+                          ),
+                        ),
+                      ],
+                    )
                   ],
                 ),
               ),
@@ -151,7 +196,7 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
                   BoxShadow(
                     blurRadius: 20,
                     color: Colors.black.withOpacity(0.01),
-                    offset: const Offset(0, -10),
+                    offset: const Offset(0, -8),
                   ),
                 ],
               ),
