@@ -46,6 +46,10 @@ class ProductCard extends StatelessWidget {
             ),
             spaceV(2.h),
             Text(
+              'model.',
+              style: TextStyle(fontSize: 8.sp, color: Colors.grey.shade400),
+            ),
+            Text(
               model.name,
               maxLines: 2,
               overflow: TextOverflow.ellipsis,
