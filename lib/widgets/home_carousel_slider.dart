@@ -1,5 +1,6 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
+
 import 'package:money_point_take_home_assignment/widgets/app_spacer.dart';
 
 import 'package:sizer/sizer.dart';

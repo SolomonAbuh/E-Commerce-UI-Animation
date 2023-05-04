@@ -36,7 +36,8 @@ class _HomePageState extends State<HomePage> {
               elevation: 0,
               title: const SearchBar()
                   .animate()
-                  .fadeIn(duration: Duration(milliseconds: 1000)).scale(),
+                  .fadeIn(duration: Duration(milliseconds: 1000))
+                  .scale(),
               toolbarHeight: 10.h,
               collapsedHeight: 16.h,
               pinned: true,
@@ -118,7 +119,7 @@ class _HomePageState extends State<HomePage> {
                   productList.length,
                   (index) => ProductCard(
                     model: productList[index],
-                  ),
+                  ).animate().sc,
                 ),
               ),
             )
