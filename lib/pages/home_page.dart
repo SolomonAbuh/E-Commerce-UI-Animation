@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:money_point_take_home_assignment/constants/app_assets.dart';
 import 'package:money_point_take_home_assignment/widgets/app_spacer.dart';
@@ -34,10 +35,8 @@ class _HomePageState extends State<HomePage> {
               backgroundColor: Colors.white,
               elevation: 0,
               title: const SearchBar(),
-
               toolbarHeight: 10.h,
               collapsedHeight: 16.h,
-
               pinned: true,
               expandedHeight: 57.h,
               flexibleSpace: FlexibleSpaceBar(
@@ -80,7 +79,7 @@ class _HomePageState extends State<HomePage> {
                                           fit: BoxFit.fitHeight,
                                           color: Colors.blueGrey.shade400,
                                         ),
-                                      ),
+                                      ).animate().fadeIn().slideX(),
                                       spaceV(2.h),
                                       Text(
                                         (tabItems[index].title),
