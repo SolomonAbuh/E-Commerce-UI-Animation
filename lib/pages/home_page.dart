@@ -103,7 +103,7 @@ class _HomePageState extends State<HomePage> {
             SliverPadding(
               padding: EdgeInsets.symmetric(horizontal: 5.w),
               sliver: SliverGrid.count(
-                childAspectRatio: 0.08.h,
+                childAspectRatio: 0.09.h,
                 crossAxisCount: 2,
                 crossAxisSpacing: 3.w,
                 mainAxisSpacing: 1.5.h,
@@ -112,7 +112,6 @@ class _HomePageState extends State<HomePage> {
                   (index) => ProductCard(
                     model: productList[index],
                   ),
-                  
                 ),
               ),
             )
