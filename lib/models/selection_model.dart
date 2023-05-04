@@ -1,6 +1,6 @@
 class SelectionModel {
   final String title;
-  final bool active;
+   bool active;
 
   SelectionModel(this.title, this.active);
 }

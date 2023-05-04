@@ -21,6 +21,7 @@ class ProductDetailsScreen extends StatefulWidget {
 class _ProductDetailsScreenState extends State<ProductDetailsScreen>
     with TickerProviderStateMixin {
   List<SelectionModel> pictureSelections = [];
+  String mainPicture = '';
 
   void addPictures(List<String> imageList) {
     for (var i = 0; i < imageList.length; i++) {
@@ -29,9 +30,18 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen>
     }
   }
 
+  void getMainPic(List<SelectionModel> imageList) {
+    for (var element in imageList) {
+      if (element.active == true) {
+        mainPicture = element.title;
+      }
+    }
+  }
+
   @override
   void initState() {
     addPictures(widget.model.images);
+    getMainPic(pictureSelections);
     super.initState();
   }
 
@@ -66,9 +76,7 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen>
                         Center(
                           child: SizedBox(
                             height: 40.h,
-                            child: Image.asset(
-                              widget.model.images[0],
-                            ),
+                            child: Image.asset(mainPicture),
                           )
                               .animate()
                               .slideY(
@@ -88,10 +96,21 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen>
                             widget.model.images.length,
                             (index) => Column(
                               children: [
-                                Container(
-                                  height: 6.h,
-                                  width: 6.h,
-                                  decoration: BoxDecoration(
+                                InkWell(
+                                  onTap: () {
+                                    setState(() {
+                                      for (var element in pictureSelections) {
+                                        element.active = false;
+                                      }
+                                      mainPicture =
+                                          pictureSelections[index].title;
+                                      pictureSelections[index].active = true;
+                                    });
+                                  },
+                                  child: Container(
+                                    height: 6.h,
+                                    width: 6.h,
+                                    decoration: BoxDecoration(
                                       boxShadow: [
                                         BoxShadow(
                                           blurRadius: 10,
@@ -99,15 +118,19 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen>
                                           offset: const Offset(0, 10),
                                         )
                                       ],
+                                      borderRadius: BorderRadius.circular(8),
                                       border: Border.all(
-                                          color: pictureSelections[index].active
-                                              ? Colors.teal
-                                              : Colors.transparent,
-                                          width: 2)),
-                                  child: ClipRRect(
-                                    child: Image.asset(
-                                      widget.model.images[index],
-                                      fit: BoxFit.cover,
+                                        color: pictureSelections[index].active
+                                            ? Colors.teal
+                                            : Colors.transparent,
+                                        width: 3,
+                                      ),
+                                    ),
+                                    child: ClipRRect(
+                                      child: Image.asset(
+                                        pictureSelections[index].title,
+                                        fit: BoxFit.cover,
+                                      ),
                                     ),
                                   ),
                                 ),
@@ -220,7 +243,7 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen>
                         ],
                       ),
                     ),
-                    spaceV(2.h),
+                    spaceV(2.5.h),
                     Row(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
