@@ -27,87 +27,19 @@ class _HomeCarouselSliderState extends State<HomeCarouselSlider> {
           fit: BoxFit.fitHeight,
           height: 40.h,
         ),
-        Padding(
-          padding: EdgeInsets.only(
-            top: kToolbarHeight,
-            left: 5.w,
-          ),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(
-                '#Fashion day',
-                style: TextStyle(fontWeight: FontWeight.w300, fontSize: 12.sp),
-              ),
-              spaceV(0.5.h),
-              Text('80% OFF',
-                  style:
-                      TextStyle(fontWeight: FontWeight.w600, fontSize: 20.sp)),
-              spaceV(0.5.h),
-              Text('Discover Fashion',
-                  style:
-                      TextStyle(fontWeight: FontWeight.w300, fontSize: 16.sp)),
-              spaceV(1.h),
-              ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.black87,
-                    shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(8))),
-                onPressed: () {},
-                child: Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Text('Check this out',
-                      style: TextStyle(
-                          fontWeight: FontWeight.w300, fontSize: 12.sp)),
-                ),
-              )
-            ],
-          ),
-        )
       ],
     ),
     Stack(
       children: [
-        Image.asset(
-          AppAssets.advertTwo,
-          fit: BoxFit.fitHeight,
-          height: 40.h,
+        Positioned(
+          bottom: 0,
+          left: 0,
+          child: Image.asset(
+            AppAssets.advertTwo,
+            fit: BoxFit.fitHeight,
+            height: 40.h,
+          ),
         ),
-        Padding(
-          padding: EdgeInsets.only(
-            top: kToolbarHeight,
-            left: 5.w,
-          ),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(
-                '#Fashion day',
-                style: TextStyle(fontWeight: FontWeight.w300, fontSize: 12.sp),
-              ),
-              spaceV(0.5.h),
-              Text('Discover our\nbeauty section',
-                  style:
-                      TextStyle(fontWeight: FontWeight.w600, fontSize: 20.sp)),
-              spaceV(1.h),
-              ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.black87,
-                    shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(8))),
-                onPressed: () {},
-                child: Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Text('Check this out',
-                      style: TextStyle(
-                          fontWeight: FontWeight.w300, fontSize: 12.sp)),
-                ),
-              )
-            ],
-          ),
-        )
       ],
     ),
   ];
@@ -125,7 +57,7 @@ class _HomeCarouselSliderState extends State<HomeCarouselSlider> {
               viewportFraction: 1,
               enableInfiniteScroll: true,
               autoPlay: true,
-              autoPlayInterval: const Duration(seconds:5),
+              autoPlayInterval: const Duration(seconds: 5),
               autoPlayAnimationDuration: const Duration(milliseconds: 800),
               autoPlayCurve: Curves.easeInOut,
               onPageChanged: (index, reason) {
