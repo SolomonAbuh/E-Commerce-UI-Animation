@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter_svg/svg.dart';
+
 import 'package:money_point_take_home_assignment/constants/app_assets.dart';
 import 'package:money_point_take_home_assignment/constants/colors.dart';
 import 'package:sizer/sizer.dart';
@@ -13,9 +12,20 @@ class ProductShopInfo extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        SizedBox(
+        Container(
+          padding: EdgeInsets.all(1.h),
           height: 10.h,
-          child: SvgPicture.asset(AppAssets.navyBlueJacketThree),
+          width: 10.h,
+          decoration: BoxDecoration(
+            shape: BoxShape.circle,
+            color: AppColors.greyLight.withOpacity(0.2),
+          ),
+          child: Center(
+            child: SvgPicture.asset(
+              AppAssets.shopIcon,
+              color: AppColors.greyLight,
+            ),
+          ),
         )
       ],
     );
