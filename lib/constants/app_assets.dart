@@ -14,7 +14,6 @@ abstract class AppAssets {
   static const String homeIcon = 'assets/icons/home.svg';
   static const String searchIcon = 'assets/icons/search.svg';
 
-
   // assets for images
   static const String advertOne = 'assets/images/ad_one.png';
   static const String advertTwo = 'assets/images/ad_two.png';
@@ -61,4 +60,6 @@ abstract class AppAssets {
       'assets/images/stone_silver_jacket_three.jpeg';
   static const String stoneSilverJacketFour =
       'assets/images/stone_silver_jacket_four.jpeg';
+
+  static const String shopLogo = 'assets/images/shop_logo.png';
 }

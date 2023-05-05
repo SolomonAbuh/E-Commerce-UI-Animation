@@ -13,20 +13,14 @@ class ProductShopInfo extends StatelessWidget {
     return Row(
       children: [
         Container(
-          padding: EdgeInsets.all(1.h),
-          height: 10.h,
-          width: 10.h,
-          decoration: BoxDecoration(
-            shape: BoxShape.circle,
-            color: AppColors.greyLight.withOpacity(0.2),
-          ),
-          child: Center(
-            child: SvgPicture.asset(
-              AppAssets.shopIcon,
-              color: AppColors.greyLight,
+            padding: EdgeInsets.all(2.5.h),
+            height: 10.h,
+            width: 10.h,
+            decoration: BoxDecoration(
+              shape: BoxShape.circle,
+              color: AppColors.greyLight.withOpacity(0.2),
             ),
-          ),
-        )
+            child: Image.asset(AppAssets.shopLogo))
       ],
     );
   }
