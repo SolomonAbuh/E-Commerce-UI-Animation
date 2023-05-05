@@ -1,7 +1,4 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:sizer/sizer.dart';
 
@@ -22,6 +19,7 @@ class AppBottomNavBar extends StatelessWidget {
                 icon: SvgPicture.asset(
                   AppAssets.homeIcon,
                   height: 20,
+                  width: 20,
                   color: Colors.teal,
                 ),
                 label: 'home'),

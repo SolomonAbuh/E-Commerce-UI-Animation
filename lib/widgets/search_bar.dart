@@ -13,6 +13,7 @@ class SearchBar extends StatelessWidget {
     return Container(
       height: 6.h,
       padding: EdgeInsets.symmetric(horizontal: 1.5.w),
+      
       child: Row(
         children: [
           Expanded(
@@ -29,11 +30,13 @@ class SearchBar extends StatelessWidget {
                 ),
                 Expanded(
                   child: TextFormField(
+                    textAlignVertical: TextAlignVertical.center,
                     style: TextStyle(
                         fontWeight: FontWeight.w600,
                         color: Colors.blueGrey.shade800,
                         fontSize: 12.sp),
                     decoration: InputDecoration(
+                      contentPadding: EdgeInsets.symmetric(horizontal: 3.w),
                       hintText: 'Search',
                       hintStyle: TextStyle(
                         fontWeight: FontWeight.w300,

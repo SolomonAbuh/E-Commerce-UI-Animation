@@ -23,7 +23,7 @@ class _HomeCarouselSliderState extends State<HomeCarouselSlider> {
           child: Image.asset(
             AppAssets.advertOne,
             fit: BoxFit.fitHeight,
-            height: 40.h,
+            height: 39.h,
           ),
         ),
       ],
@@ -36,7 +36,7 @@ class _HomeCarouselSliderState extends State<HomeCarouselSlider> {
           child: Image.asset(
             AppAssets.advertTwo,
             fit: BoxFit.fitHeight,
-            height: 40.h,
+            height: 39.h,
           ),
         ),
       ],
@@ -47,12 +47,12 @@ class _HomeCarouselSliderState extends State<HomeCarouselSlider> {
   Widget build(BuildContext context) {
     return Stack(alignment: Alignment.topRight, children: [
       SizedBox(
-        height: 40.h,
+        height: 39.h,
         child: CarouselSlider(
           carouselController: _controller,
           items: imgList,
           options: CarouselOptions(
-              height: 40.h,
+              height: 39.h,
               viewportFraction: 1,
               enableInfiniteScroll: true,
               autoPlay: true,

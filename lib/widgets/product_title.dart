@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:money_point_take_home_assignment/models/product_model.dart';
 import 'package:sizer/sizer.dart';
@@ -11,14 +9,18 @@ class ProductTitle extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return   Text(
-                      model.name,
-                      style: TextStyle(
-                        fontSize: 18.sp,
-                        fontWeight: FontWeight.w800,
-                      ),
-                    )
-                        .animate(delay: const Duration(milliseconds: 800))
-                        .fade(duration: const Duration(milliseconds: 800));
+    return Text(
+      model.name,
+      style: TextStyle(
+        fontSize: 18.sp,
+        fontWeight: FontWeight.w800,
+      ),
+    )
+        .animate(
+          delay: const Duration(milliseconds: 800),
+        )
+        .fade(
+          duration: const Duration(milliseconds: 800),
+        );
   }
 }

@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
-
 import 'package:money_point_take_home_assignment/models/product_model.dart';
 import 'package:sizer/sizer.dart';
-
-import '../constants/colors.dart';
+import '../constants/text_styles.dart';
 import 'app_spacer.dart';
 
 class AboutItems extends StatelessWidget {
@@ -25,13 +23,12 @@ class AboutItems extends StatelessWidget {
                 children: [
                   Text(
                     'Brand: ',
-                    style:
-                        TextStyle(fontSize: 12.sp, color: AppColors.greyLight),
+                    style: AppTextStyles.smallTextLight,
                   ),
                   Text(
                     'Palm Angels',
-                    style:
-                        TextStyle(fontSize: 12.sp, fontWeight: FontWeight.w600),
+                    style: AppTextStyles.smallText
+                        .copyWith(fontWeight: FontWeight.w600),
                   ),
                 ],
               ),
@@ -41,13 +38,12 @@ class AboutItems extends StatelessWidget {
                 children: [
                   Text(
                     'color: ',
-                    style:
-                        TextStyle(fontSize: 12.sp, color: AppColors.greyLight),
+                    style: AppTextStyles.smallTextLight,
                   ),
                   Text(
                     model.productCategory,
-                    style:
-                        TextStyle(fontSize: 12.sp, fontWeight: FontWeight.w600),
+                    style: AppTextStyles.smallText
+                        .copyWith(fontWeight: FontWeight.w600),
                   ),
                 ],
               ),
@@ -57,13 +53,12 @@ class AboutItems extends StatelessWidget {
                 children: [
                   Text(
                     'Condition: ',
-                    style:
-                        TextStyle(fontSize: 12.sp, color: AppColors.greyLight),
+                    style: AppTextStyles.smallTextLight,
                   ),
                   Text(
                     'New',
-                    style:
-                        TextStyle(fontSize: 12.sp, fontWeight: FontWeight.w600),
+                    style: AppTextStyles.smallText
+                        .copyWith(fontWeight: FontWeight.w600),
                   ),
                 ],
               ),
@@ -80,13 +75,12 @@ class AboutItems extends StatelessWidget {
                 children: [
                   Text(
                     'color: ',
-                    style:
-                        TextStyle(fontSize: 12.sp, color: AppColors.greyLight),
+                    style: AppTextStyles.smallTextLight,
                   ),
                   Text(
                     'Red',
-                    style:
-                        TextStyle(fontSize: 12.sp, fontWeight: FontWeight.w600),
+                    style: AppTextStyles.smallText
+                        .copyWith(fontWeight: FontWeight.w600),
                   ),
                 ],
               ),
@@ -96,13 +90,12 @@ class AboutItems extends StatelessWidget {
                 children: [
                   Text(
                     'Material: ',
-                    style:
-                        TextStyle(fontSize: 12.sp, color: AppColors.greyLight),
+                    style: AppTextStyles.smallTextLight,
                   ),
                   Text(
                     'Cotton',
-                    style:
-                        TextStyle(fontSize: 12.sp, fontWeight: FontWeight.w600),
+                    style: AppTextStyles.smallText
+                        .copyWith(fontWeight: FontWeight.w600),
                   ),
                 ],
               ),
@@ -112,13 +105,12 @@ class AboutItems extends StatelessWidget {
                 children: [
                   Text(
                     'Heavy: ',
-                    style:
-                        TextStyle(fontSize: 12.sp, color: AppColors.greyLight),
+                    style: AppTextStyles.smallTextLight,
                   ),
                   Text(
                     '200g',
-                    style:
-                        TextStyle(fontSize: 12.sp, fontWeight: FontWeight.w600),
+                    style: AppTextStyles.smallText
+                        .copyWith(fontWeight: FontWeight.w600),
                   ),
                 ],
               ),

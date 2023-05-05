@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:money_point_take_home_assignment/constants/text_styles.dart';
 import 'package:sizer/sizer.dart';
 
 import 'package:money_point_take_home_assignment/widgets/app_spacer.dart';
@@ -28,7 +29,7 @@ class ProductCard extends StatelessWidget {
             BoxShadow(
                 color: Colors.black.withOpacity(0.06),
                 blurRadius: 10,
-                offset: Offset(0, 10)),
+                offset: const Offset(0, 10)),
           ],
         ),
         child: Padding(
@@ -66,8 +67,8 @@ class ProductCard extends StatelessWidget {
                 model.name,
                 maxLines: 2,
                 overflow: TextOverflow.ellipsis,
-                style: TextStyle(
-                    fontSize: 10.sp, fontWeight: FontWeight.w600, height: 1.5),
+                style: AppTextStyles.verySmallText
+                    .copyWith(fontWeight: FontWeight.w600, height: 1.5),
               ),
               const Spacer(),
               Row(
@@ -83,17 +84,16 @@ class ProductCard extends StatelessWidget {
                       spaceH(0.5.w),
                       Text(
                         '${model.rating} | 2,302',
-                        style: TextStyle(
-                            fontSize: 10.sp, color: AppColors.greyLight),
+                        style: AppTextStyles.verySmallTextLight,
                       )
                     ],
                   ),
                   Text(
                     '\$${model.price}',
-                    style: TextStyle(
-                        fontSize: 14.sp,
-                        color: AppColors.primary,
-                        fontWeight: FontWeight.w600),
+                    style: AppTextStyles.mediumText.copyWith(
+                      color: AppColors.primary,
+                      fontWeight: FontWeight.w600,
+                    ),
                   )
                 ],
               )

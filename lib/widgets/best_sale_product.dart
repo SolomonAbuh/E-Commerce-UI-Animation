@@ -8,7 +8,7 @@ class BestSaleProduct extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.white,
+      color: Colors.grey.shade100,
       padding: EdgeInsets.only(top: 2.h, left: 5.w, right: 5.w, bottom: 2.h),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
