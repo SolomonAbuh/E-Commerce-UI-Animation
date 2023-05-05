@@ -11,6 +11,7 @@ import '../widgets/about_items.dart';
 import '../widgets/bottom_summary.dart';
 import '../widgets/product_details_app_bar.dart';
 import '../widgets/product_details_tab_bar.dart';
+import '../widgets/product_shop_info.dart';
 import '../widgets/product_stats.dart';
 import '../widgets/vendor.dart';
 
@@ -51,7 +52,9 @@ class ProductDetailsScreen extends StatelessWidget {
                     Divider(height: 5.h, color: AppColors.greyLight),
                     const ProductDescription(),
                     Divider(height: 5.h, color: AppColors.greyLight),
-                    const ProductShippingInfo()
+                    const ProductShippingInfo(),
+                    spaceV(3.5.h),
+                   const ProductShopInfo()
                   ],
                 ),
               ),
