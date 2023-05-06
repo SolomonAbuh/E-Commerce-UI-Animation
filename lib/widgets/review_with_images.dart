@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:money_point_take_home_assignment/constants/colors.dart';
 import 'package:money_point_take_home_assignment/models/product_model.dart';
 import 'package:sizer/sizer.dart';
 
@@ -47,8 +48,23 @@ class ReviewWithImages extends StatelessWidget {
                         ),
                       ),
                     ),
+                    Container(
+                      height: 8.h,
+                      width: 8.h,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(8),
+                        color: Colors.black38,
+                      ),
+                      child: Center(
+                        child: Text(
+                          '132',
+                          style: AppTextStyles.smallText.copyWith(
+                            color: AppColors.white,
+                          ),
+                        ),
+                      ),
+                    )
                   ],
-                  in
                 );
               },
               separatorBuilder: (context, index) => spaceH(6.5.w),
