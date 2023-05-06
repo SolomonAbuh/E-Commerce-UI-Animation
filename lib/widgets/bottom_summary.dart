@@ -3,9 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:sizer/sizer.dart';
-
 import 'package:money_point_take_home_assignment/models/product_model.dart';
-
 import '../constants/app_assets.dart';
 import '../constants/colors.dart';
 import '../constants/text_styles.dart';
@@ -40,8 +38,9 @@ class BottomSummary extends StatelessWidget {
             Text(
               '\$${model.price}',
               style: AppTextStyles.mediumText.copyWith(
+                fontSize: 18.sp,
                 color: AppColors.primary,
-                fontWeight: FontWeight.w600,
+                fontWeight: FontWeight.w700,
               ),
             ),
             Container(
@@ -95,12 +94,12 @@ class BottomSummary extends StatelessWidget {
           ],
         ),
       ),
-    )..animate(delay: const Duration(milliseconds: 500)).slideY(
-                  begin: 10,
-                  duration: const Duration(
-                    milliseconds: 500,
-                  ),
-                  curve: Curves.easeOut,
-                ),;
+    ).animate(delay: const Duration(milliseconds: 500)).slideY(
+          begin: 1,
+          duration: const Duration(
+            milliseconds: 800,
+          ),
+          curve: Curves.easeOut,
+        );
   }
 }
