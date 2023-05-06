@@ -70,37 +70,42 @@ class ReviewAndRatings extends StatelessWidget {
             ),
             spaceH(8.w),
             Expanded(
-              child: Row(
-                children: [
-                  Column(
-                    children: List.generate(
-                      5,
-                      (index) => Padding(
-                        padding: EdgeInsets.only(bottom: 1.h),
-                        child: Row(
-                          children: [
-                            const Icon(
-                              Icons.star_rounded,
-                              color: Colors.amber,
-                            ),
-                            spaceH(2.w),
-                            Text(
-                              (index - 5).toString().substring(1),
-                            ),
-                            Stack(
-                              children: [
-                                Container(
-                                  height: 1.h,
-                                ),
-                                Container(1.h),
-                              ],
-                            )
-                          ],
+              child: Column(
+                children: List.generate(
+                  5,
+                  (index) => Padding(
+                    padding: EdgeInsets.only(bottom: 1.h),
+                    child: Row(
+                      children: [
+                        const Icon(
+                          Icons.star_rounded,
+                          color: Colors.amber,
                         ),
-                      ),
+                        spaceH(2.w),
+                        Text(
+                          (index - 5).toString().substring(1),
+                        ),
+                        Expanded(
+                          child: Stack(
+                            children: [
+                              Container(
+                                height: 1.h,
+                                decoration:
+                                    BoxDecoration(color: AppColors.greyLight),
+                              ),
+                              Container(
+                                height: 1.h,
+                                padding: Ed,
+                                decoration:
+                                    BoxDecoration(color: AppColors.primary),
+                              ),
+                            ],
+                          ),
+                        )
+                      ],
                     ),
-                  )
-                ],
+                  ),
+                ),
               ),
             )
           ],
