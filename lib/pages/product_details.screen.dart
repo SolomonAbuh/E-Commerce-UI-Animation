@@ -60,7 +60,7 @@ class ProductDetailsScreen extends StatelessWidget {
                     Divider(height: 5.h, color: AppColors.greyLight),
                     ReviewAndRatings(model: model),
                     spaceV(3.5.h),
-                    const ReviewWithImages(),
+                    ReviewWithImages(model: model),
                     Divider(height: 5.h, color: AppColors.greyLight),
                   ],
                 ),

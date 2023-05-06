@@ -114,6 +114,7 @@ class _ProductDetailsPictureState extends State<ProductDetailsPicture> {
                 .scale(),
           ),
         )
+     
       ],
     );
   }
