@@ -43,7 +43,7 @@ class ProductShopInfo extends StatelessWidget {
                     style: AppTextStyles.mediumText
                         .copyWith(fontWeight: FontWeight.w600),
                   ),
-                  spaceV(1.h),
+                  spaceV(1.5.h),
                   Wrap(
                     children: [
                       Text('Active 5 mins ago | ',
@@ -52,34 +52,39 @@ class ProductShopInfo extends StatelessWidget {
                           style: AppTextStyles.verySmallTextLight),
                     ],
                   ),
-                  spaceV(1.h),
+                  spaceV(1.5.h),
                   ElevatedButton(
                       style: ElevatedButton.styleFrom(
                           backgroundColor: Colors.white,
                           elevation: 0,
+                          shadowColor: Colors.transparent,
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(8),
                             side:
                                 BorderSide(color: AppColors.primary, width: 2),
                           )),
                       onPressed: () {},
-                      child: Row(
-                        mainAxisSize: MainAxisSize.min,
-                        children: [
-                          SvgPicture.asset(
-                            AppAssets.shopIcon,
-                            color: AppColors.primary,
-                            height: 2.5.h,
-                          ),
-                          spaceH(2.w),
-                          Text(
-                            'Visit Store',
-                            style: AppTextStyles.smallText.copyWith(
+                      child: Padding(
+                        padding: EdgeInsets.symmetric(
+                            horizontal: 4.w, vertical: 1.h),
+                        child: Row(
+                          mainAxisSize: MainAxisSize.min,
+                          children: [
+                            SvgPicture.asset(
+                              AppAssets.shopIcon,
                               color: AppColors.primary,
-                              fontWeight: FontWeight.w600,
+                              height: 2.5.h,
                             ),
-                          )
-                        ],
+                            spaceH(2.w),
+                            Text(
+                              'Visit Store',
+                              style: AppTextStyles.smallText.copyWith(
+                                color: AppColors.primary,
+                                fontWeight: FontWeight.w600,
+                              ),
+                            )
+                          ],
+                        ),
                       ))
                 ],
               ),
