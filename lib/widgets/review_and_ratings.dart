@@ -95,15 +95,16 @@ class ReviewAndRatings extends StatelessWidget {
                             children: [
                               Container(
                                 height: 1.h,
-                                decoration:
-                                    BoxDecoration(color: AppColors.greyLight),
+                                decoration: BoxDecoration(
+                                    color: AppColors.greyLight.withOpacity(0.5),
+                                    borderRadius: BorderRadius.circular(20)),
                               ),
                               Container(
                                 height: 1.h,
                                 margin: EdgeInsets.only(right: (index * 9).w),
                                 decoration: BoxDecoration(
-                                  color: AppColors.primary,
-                                ),
+                                    color: AppColors.primary,
+                                    borderRadius: BorderRadius.circular(20)),
                               ),
                             ],
                           ),

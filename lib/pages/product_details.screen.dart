@@ -14,6 +14,7 @@ import '../widgets/product_details_app_bar.dart';
 import '../widgets/product_details_tab_bar.dart';
 import '../widgets/product_shop_info.dart';
 import '../widgets/product_stats.dart';
+import '../widgets/review_with_images.dart';
 import '../widgets/vendor.dart';
 
 class ProductDetailsScreen extends StatelessWidget {
@@ -57,7 +58,9 @@ class ProductDetailsScreen extends StatelessWidget {
                     Divider(height: 5.h, color: AppColors.greyLight),
                     const ProductShopInfo(),
                     Divider(height: 5.h, color: AppColors.greyLight),
-                   ReviewAndRatings(model:  model),
+                    ReviewAndRatings(model: model),
+                    spaceV(3.5.h),
+                    const ReviewWithImages(),
                     Divider(height: 5.h, color: AppColors.greyLight),
                   ],
                 ),
