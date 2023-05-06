@@ -33,17 +33,38 @@ class ProductShopInfo extends StatelessWidget {
                     fit: BoxFit.cover,
                   ),
                 )),
-            Column(
-              children: [
-                Text(
-                  'Shop_Pay',
-                  style: AppTextStyles.mediumText
-                      .copyWith(fontWeight: FontWeight.w600),
-                ),
-                spaceV(3.h),
-                Text('Active 5 mins ago | 96.7 positive feedback',
-                    style: AppTextStyles.verySmallTextl),
-              ],
+            spaceH(5.w),
+            Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    'Shop_Pay',
+                    style: AppTextStyles.mediumText
+                        .copyWith(fontWeight: FontWeight.w600),
+                  ),
+                  spaceV(1.h),
+                  Wrap(
+                    children: [
+                      Text('Active 5 mins ago | ',
+                          style: AppTextStyles.verySmallTextLight),
+                      Text('96.7 positive feedback',
+                          style: AppTextStyles.verySmallTextLight),
+                    ],
+                  ),
+                  spaceV(1.h),
+                  ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.white,
+                        elevation: 0,
+                      ),
+                      onPressed: () {},
+                      child: Row(
+                        mainAxisSize: MainAxisSize.min,
+                        children: [],
+                      ))
+                ],
+              ),
             )
           ],
         ),

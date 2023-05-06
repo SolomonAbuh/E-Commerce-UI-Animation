@@ -12,7 +12,7 @@ class ProductShippingInfo extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(
-          'Shipping information:',
+          'Shipping information',
           style: AppTextStyles.mediumText.copyWith(fontWeight: FontWeight.w600),
         ),
         spaceV(3.h),
