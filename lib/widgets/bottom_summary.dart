@@ -1,13 +1,21 @@
+// ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:sizer/sizer.dart';
 
+import 'package:money_point_take_home_assignment/models/product_model.dart';
+
 import '../constants/app_assets.dart';
 import '../constants/colors.dart';
+import '../constants/text_styles.dart';
 
 class BottomSummary extends StatelessWidget {
-  const BottomSummary({super.key});
+  final ProductModel model;
+  const BottomSummary({
+    Key? key,
+    required this.model,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -29,7 +37,13 @@ class BottomSummary extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            const Text(''),
+            Text(
+              '\$${model.price}',
+              style: AppTextStyles.mediumText.copyWith(
+                color: AppColors.primary,
+                fontWeight: FontWeight.w600,
+              ),
+            ),
             Container(
               decoration: BoxDecoration(
                 boxShadow: [
@@ -77,16 +91,16 @@ class BottomSummary extends StatelessWidget {
                   )
                 ],
               ),
-            ).animate(delay: const Duration(milliseconds: 500)).slideY(
+            )
+          ],
+        ),
+      ),
+    )..animate(delay: const Duration(milliseconds: 500)).slideY(
                   begin: 10,
                   duration: const Duration(
                     milliseconds: 500,
                   ),
                   curve: Curves.easeOut,
-                ),
-          ],
-        ),
-      ),
-    );
+                ),;
   }
 }

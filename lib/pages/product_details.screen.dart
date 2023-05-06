@@ -61,7 +61,9 @@ class ProductDetailsScreen extends StatelessWidget {
               ),
             ),
           ),
-          const BottomSummary(),
+          BottomSummary(
+            model: model,
+          ),
         ],
       ),
     );
