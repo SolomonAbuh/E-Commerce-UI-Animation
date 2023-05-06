@@ -27,6 +27,7 @@ class ReviewAndRatings extends StatelessWidget {
         ),
         spaceV(3.h),
         Row(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Column(
               mainAxisAlignment: MainAxisAlignment.start,
@@ -67,26 +68,37 @@ class ReviewAndRatings extends StatelessWidget {
                 ),
               ],
             ),
-            spaceH(3.w),
+            spaceH(8.w),
             Expanded(
               child: Row(
                 children: [
                   Column(
                     children: List.generate(
-                        5,
-                        (index) => Padding(
-                          padding: const EdgeInsets.only(bottom: 2.h),
-                          child: Row(
-                            
-                                children: [
-                                  const Icon(
-                                    Icons.star_rounded,
-                                    color: Colors.amber,
-                                  ),
-                                  
-                                ],
-                              ),
-                        )),
+                      5,
+                      (index) => Padding(
+                        padding: EdgeInsets.only(bottom: 1.h),
+                        child: Row(
+                          children: [
+                            const Icon(
+                              Icons.star_rounded,
+                              color: Colors.amber,
+                            ),
+                            spaceH(2.w),
+                            Text(
+                              (index - 5).toString().substring(1),
+                            ),
+                            Stack(
+                              children: [
+                                Container(
+                                  height: 1.h,
+                                ),
+                                Container(1.h),
+                              ],
+                            )
+                          ],
+                        ),
+                      ),
+                    ),
                   )
                 ],
               ),
