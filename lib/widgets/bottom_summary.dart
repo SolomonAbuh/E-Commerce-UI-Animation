@@ -43,8 +43,8 @@ class BottomSummary extends StatelessWidget {
               child: Row(
                 children: [
                   Container(
-                    width: 15.w,
-                    height: 5.5.h,
+                    width: 18.w,
+                    height: 6.h,
                     decoration: BoxDecoration(
                       color: AppColors.primary,
                       borderRadius: const BorderRadius.only(
@@ -59,8 +59,8 @@ class BottomSummary extends StatelessWidget {
                     )),
                   ),
                   Container(
-                    width: 25.w,
-                    height: 5.5.h,
+                    width: 28.w,
+                    height: 6.h,
                     decoration: BoxDecoration(
                       color: AppColors.textColor,
                       borderRadius: const BorderRadius.only(
@@ -77,7 +77,8 @@ class BottomSummary extends StatelessWidget {
                   )
                 ],
               ),
-            ).animate(delay: const Duration(milliseconds: 800)).scale(
+            ).animate(delay: const Duration(milliseconds: 500)).slideY(
+                  begin: 10,
                   duration: const Duration(
                     milliseconds: 500,
                   ),
