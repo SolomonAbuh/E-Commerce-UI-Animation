@@ -1,11 +1,18 @@
+// ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
+
+import 'package:money_point_take_home_assignment/models/product_model.dart';
 
 import '../constants/text_styles.dart';
 import 'app_spacer.dart';
 
 class ReviewAndRatings extends StatelessWidget {
-  const ReviewAndRatings({super.key});
+  final ProductModel model;
+  const ReviewAndRatings({
+    Key? key,
+    required this.model,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -26,7 +33,10 @@ class ReviewAndRatings extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.baseline,
                   textBaseline: TextBaseline.alphabetic,
                   children: [
-                    
+                    Text(
+                      model.rating,
+                      style: TextStyle(fontWeight: FontWeight.w800),
+                    )
                   ],
                 )
               ],
