@@ -53,8 +53,9 @@ class ProductDetailsScreen extends StatelessWidget {
                     const ProductDescription(),
                     Divider(height: 5.h, color: AppColors.greyLight),
                     const ProductShippingInfo(),
-                    spaceV(3.5.h),
-                   const ProductShopInfo()
+                    Divider(height: 5.h, color: AppColors.greyLight),
+                    const ProductShopInfo(),
+                    Divider(height: 5.h, color: AppColors.greyLight),
                   ],
                 ),
               ),

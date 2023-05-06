@@ -12,15 +12,18 @@ class ProductShopInfo extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        Container(
-            padding: EdgeInsets.all(2.5.h),
+        SizedBox(
             height: 10.h,
             width: 10.h,
-            decoration: BoxDecoration(
-              shape: BoxShape.circle,
-              color: AppColors.greyLight.withOpacity(0.2),
-            ),
-            child: Image.asset(AppAssets.shopLogo))
+            child: ClipOval(
+              child: Image.asset(
+                AppAssets.shopLogo,
+                fit: BoxFit.cover,
+              ),
+            )),
+        Column(
+          children: [Text('')],
+        )
       ],
     );
   }

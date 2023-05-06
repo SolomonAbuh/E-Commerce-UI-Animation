@@ -57,9 +57,10 @@ class ProductShippingInfo extends StatelessWidget {
               'Estimated to arrive on 25-04-2023',
               style: TextStyle(fontSize: 12.sp, fontWeight: FontWeight.w600),
             ),
+
+            
           ],
         ),
-        spaceV(3.h),
       ],
     );
   }
