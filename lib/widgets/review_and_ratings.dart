@@ -109,8 +109,12 @@ class ReviewAndRatings extends StatelessWidget {
                           ),
                         ),
                         spaceH(2.w),
-                        Text(
-                          (index - 5 * (index * 20)).toString().substring(1),
+                        Expanded(
+                          flex: 1,
+                          child: Text(
+                            (index - 5).toString().substring(1) +
+                                (index < 2 ? 'k' : ''),
+                          ),
                         ),
                       ],
                     ),
