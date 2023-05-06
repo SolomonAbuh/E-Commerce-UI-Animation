@@ -1,5 +1,6 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:sizer/sizer.dart';
 
 import 'package:money_point_take_home_assignment/models/product_model.dart';
@@ -34,14 +35,25 @@ class ReviewAndRatings extends StatelessWidget {
                   textBaseline: TextBaseline.alphabetic,
                   children: [
                     Text(
-                      model.rating,
-                      style: TextStyle(fontWeight: FontWeight.w800),
-                    )
+                      '4.9',
+                      style: GoogleFonts.poppins(
+                        fontWeight: FontWeight.w800,
+                        fontSize: 40.sp,
+                      ),
+                    ),
+                    Text(
+                      '/ 5.0',
+                      style: AppTextStyles.smallTextLight,
+                    ),
                   ],
                 )
+               ,spaceV(3.h),
+               Row(children: [],)
               ],
             ),
-            Expanded(child: Column())
+            Expanded(
+              child: Column(),
+            )
           ],
         )
       ],
