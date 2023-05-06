@@ -5,6 +5,7 @@ import 'package:sizer/sizer.dart';
 
 import 'package:money_point_take_home_assignment/models/product_model.dart';
 
+import '../constants/colors.dart';
 import '../constants/text_styles.dart';
 import 'app_spacer.dart';
 
@@ -46,13 +47,49 @@ class ReviewAndRatings extends StatelessWidget {
                       style: AppTextStyles.smallTextLight,
                     ),
                   ],
-                )
-               ,spaceV(3.h),
-               Row(children: [],)
+                ),
+                spaceV(3.h),
+                Row(
+                  children: List.generate(
+                    5,
+                    (index) => const Icon(
+                      Icons.star_rounded,
+                      color: Colors.amber,
+                    ),
+                  ),
+                ),
+                spaceV(3.h),
+                Text(
+                  '2.9k + Reviews',
+                  style: TextStyle(
+                    color: AppColors.greyLight,
+                  ),
+                ),
               ],
             ),
+            spaceH(3.w),
             Expanded(
-              child: Column(),
+              child: Row(
+                children: [
+                  Column(
+                    children: List.generate(
+                        5,
+                        (index) => Padding(
+                          padding: const EdgeInsets.only(bottom: 2.h),
+                          child: Row(
+                            
+                                children: [
+                                  const Icon(
+                                    Icons.star_rounded,
+                                    color: Colors.amber,
+                                  ),
+                                  
+                                ],
+                              ),
+                        )),
+                  )
+                ],
+              ),
             )
           ],
         )
