@@ -65,7 +65,21 @@ class ProductShopInfo extends StatelessWidget {
                       onPressed: () {},
                       child: Row(
                         mainAxisSize: MainAxisSize.min,
-                        children: [SvgPicture.asset(A)],
+                        children: [
+                          SvgPicture.asset(
+                            AppAssets.shopIcon,
+                            color: AppColors.primary,
+                            height: 2.5.h,
+                          ),
+                          spaceH(2.w),
+                          Text(
+                            'Visit Store',
+                            style: AppTextStyles.smallText.copyWith(
+                              color: AppColors.primary,
+                              fontWeight: FontWeight.w600,
+                            ),
+                          )
+                        ],
                       ))
                 ],
               ),
