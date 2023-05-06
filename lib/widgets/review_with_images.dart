@@ -19,16 +19,40 @@ class ReviewWithImages extends StatelessWidget {
           style: AppTextStyles.mediumText.copyWith(fontWeight: FontWeight.w600),
         ),
         spaceV(3.h),
-        Row(
-          children: List.generate(
-              model.images.length,
-              (index) => Expanded(
-                    child: Row(
-                      children: [
-                      
-                      ],
+        SizedBox(
+          height: 8.h,
+          child: ListView.separated(
+              shrinkWrap: true,
+              scrollDirection: Axis.horizontal,
+              itemBuilder: (context, index) {
+                return Stack(
+                  children: [
+                    Container(
+                      height: 8.h,
+                      width: 8.h,
+                      decoration: BoxDecoration(
+                        boxShadow: [
+                          BoxShadow(
+                            blurRadius: 10,
+                            color: Colors.black.withOpacity(0.2),
+                            offset: const Offset(0, 10),
+                          )
+                        ],
+                        borderRadius: BorderRadius.circular(8),
+                      ),
+                      child: ClipRRect(
+                        child: Image.asset(
+                          model.images[index],
+                          fit: BoxFit.cover,
+                        ),
+                      ),
                     ),
-                  )),
+                  ],
+                  in
+                );
+              },
+              separatorBuilder: (context, index) => spaceH(6.5.w),
+              itemCount: model.images.length),
         )
       ],
     );
