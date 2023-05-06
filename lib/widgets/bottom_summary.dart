@@ -99,7 +99,7 @@ class BottomSummary extends StatelessWidget {
           duration: const Duration(
             milliseconds: 800,
           ),
-          curve: Curves.easeOut,
+          curve: Curves.fastLinearToSlowEaseIn,
         );
   }
 }
