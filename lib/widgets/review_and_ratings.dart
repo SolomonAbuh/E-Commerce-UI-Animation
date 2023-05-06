@@ -10,12 +10,30 @@ class ReviewAndRatings extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(
-          'Review & ',
+          'Review & Rating:',
           style: AppTextStyles.mediumText.copyWith(fontWeight: FontWeight.w600),
         ),
         spaceV(3.h),
+        Row(
+          children: [
+            Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                Row(
+                  crossAxisAlignment: CrossAxisAlignment.baseline,
+                  textBaseline: TextBaseline.alphabetic,
+                  children: [
+                    
+                  ],
+                )
+              ],
+            ),
+            Expanded(child: Column())
+          ],
+        )
       ],
     );
   }
