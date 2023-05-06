@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:money_point_take_home_assignment/widgets/search_bar.dart';
 import 'package:sizer/sizer.dart';
 
 import '../constants/app_assets.dart';
@@ -18,66 +19,7 @@ class HomeSliverAppBar extends StatelessWidget {
       backgroundColor: Colors.white,
       elevation: 0,
       titleSpacing: 0,
-      title: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 5.w, vertical: 1.h),
-        child: Row(
-          children: [
-            Expanded(
-                child: Container(
-              padding: EdgeInsets.symmetric(horizontal: 3.w),
-              decoration: BoxDecoration(
-                  border: Border.all(color: Colors.blueGrey.shade400),
-                  borderRadius: BorderRadius.circular(8)),
-              child: Row(
-                children: [
-                  SvgPicture.asset(
-                    AppAssets.searchIcon,
-                    color: Colors.blueGrey.shade400,
-                  ),
-                  Expanded(
-                    child: TextFormField(
-                      textAlignVertical: TextAlignVertical.center,
-                      style: TextStyle(
-                          fontWeight: FontWeight.w600,
-                          color: Colors.blueGrey.shade800,
-                          fontSize: 12.sp),
-                      decoration: InputDecoration(
-                        contentPadding: EdgeInsets.symmetric(horizontal: 3.w),
-                        hintText: 'Search',
-                        hintStyle: TextStyle(
-                          fontWeight: FontWeight.w300,
-                          color: Colors.blueGrey.shade400,
-                        ),
-                        border: const OutlineInputBorder(
-                            borderSide: BorderSide.none),
-                        enabledBorder: const OutlineInputBorder(
-                            borderSide: BorderSide.none),
-                        focusedBorder: const OutlineInputBorder(
-                            borderSide: BorderSide.none),
-                      ),
-                    ),
-                  )
-                ],
-              ),
-            )),
-            spaceH(5.w),
-            SvgPicture.asset(
-              AppAssets.shoppingBagIcon,
-              color: Colors.blueGrey.shade600,
-            ),
-            spaceH(5.w),
-            SvgPicture.asset(
-              AppAssets.shoppingBagIcon,
-              color: Colors.blueGrey.shade600,
-            ),
-          ],
-        ),
-      )
-          .animate()
-          .fadeIn(
-            duration: const Duration(milliseconds: 1000),
-          )
-          .scale(),
+      title:SearchBar(),
       toolbarHeight: 10.h,
       collapsedHeight: 18.h,
       pinned: true,

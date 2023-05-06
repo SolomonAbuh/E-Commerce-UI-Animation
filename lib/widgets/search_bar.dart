@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:sizer/sizer.dart';
@@ -12,8 +13,7 @@ class SearchBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       height: 6.h,
-      padding: EdgeInsets.symmetric(horizontal: 1.5.w),
-      
+      padding: EdgeInsets.symmetric(horizontal: 3.5.w),
       child: Row(
         children: [
           Expanded(
@@ -60,10 +60,10 @@ class SearchBar extends StatelessWidget {
             color: Colors.blueGrey.shade600,
           ),
           spaceH(5.w),
-          SvgPicture.asset(
-            AppAssets.shoppingBagIcon,
+          Icon(
+            CupertinoIcons.chat_bubble,
             color: Colors.blueGrey.shade600,
-          ),
+          )
         ],
       ),
     );

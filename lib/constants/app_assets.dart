@@ -13,6 +13,7 @@ abstract class AppAssets {
   static const String ticketIcon = 'assets/icons/ticket.svg';
   static const String homeIcon = 'assets/icons/home.svg';
   static const String searchIcon = 'assets/icons/search.svg';
+  static const String messageIcon = 'assets/icons/message.svg';
 
   // assets for images
   static const String advertOne = 'assets/images/ad_one.png';
