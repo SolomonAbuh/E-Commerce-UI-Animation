@@ -82,10 +82,15 @@ class ReviewAndRatings extends StatelessWidget {
                           color: Colors.amber,
                         ),
                         spaceH(2.w),
-                        Text(
-                          (index - 5).toString().substring(1),
-                        ),
                         Expanded(
+                          flex: 1,
+                          child: Text(
+                            (index - 5).toString().substring(1),
+                          ),
+                        ),
+                        spaceH(2.w),
+                        Expanded(
+                          flex: 6,
                           child: Stack(
                             children: [
                               Container(
@@ -95,13 +100,18 @@ class ReviewAndRatings extends StatelessWidget {
                               ),
                               Container(
                                 height: 1.h,
-                                padding: Ed,
-                                decoration:
-                                    BoxDecoration(color: AppColors.primary),
+                                margin: EdgeInsets.only(right: (index * 9).w),
+                                decoration: BoxDecoration(
+                                  color: AppColors.primary,
+                                ),
                               ),
                             ],
                           ),
-                        )
+                        ),
+                        spaceH(2.w),
+                        Text(
+                          (index - 5 * (index * 20)).toString().substring(1),
+                        ),
                       ],
                     ),
                   ),
