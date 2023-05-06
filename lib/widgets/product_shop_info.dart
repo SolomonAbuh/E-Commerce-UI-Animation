@@ -55,13 +55,17 @@ class ProductShopInfo extends StatelessWidget {
                   spaceV(1.h),
                   ElevatedButton(
                       style: ElevatedButton.styleFrom(
-                        backgroundColor: Colors.white,
-                        elevation: 0,
-                      ),
+                          backgroundColor: Colors.white,
+                          elevation: 0,
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(8),
+                            side:
+                                BorderSide(color: AppColors.primary, width: 2),
+                          )),
                       onPressed: () {},
                       child: Row(
                         mainAxisSize: MainAxisSize.min,
-                        children: [],
+                        children: [SvgPicture.asset(A)],
                       ))
                 ],
               ),
