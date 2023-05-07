@@ -37,7 +37,7 @@ class TopReviews extends StatelessWidget {
             ),
             Container(
               height: 5.h,
-              padding: EdgeInsets.symmetric(horizontal: 2.h),
+              padding: ,
               decoration: BoxDecoration(
                 color: Colors.white,
                 border: Border.all(
@@ -46,9 +46,7 @@ class TopReviews extends StatelessWidget {
                 borderRadius: BorderRadius.circular(8),
               ),
               child: DropdownButtonHideUnderline(
-              
                 child: DropdownButton<String>(
-                
                   focusColor: AppColors.white,
                   dropdownColor: AppColors.white,
                   value: 'Popular',
