@@ -27,7 +27,7 @@ class TopReviews extends StatelessWidget {
                 ),
                 spaceV(2.h),
                 SizedBox(
-                  width: 40.w,
+                  width: 50.w,
                   child: Text(
                     'Showing 3 out of 2.5k+ reviews',
                     style: AppTextStyles.smallTextLight,
@@ -35,35 +35,35 @@ class TopReviews extends StatelessWidget {
                 )
               ],
             ),
-            Align(
-              alignment: Alignment.centerLeft,
-              child: Container(
-                height: 5.h,
-                padding: EdgeInsets.symmetric(horizontal: 2.h),
-                decoration: BoxDecoration(
-                    color: Colors.white,
-                    border: Border.all(
-                      color: AppColors.greyLight,
-                    ),
-                    borderRadius: BorderRadius.circular(8)),
-                child: DropdownButtonHideUnderline(
-                  child: DropdownButton<String>(
-                    focusColor: AppColors.white,
-                    dropdownColor: AppColors.white,
-                    value: 'Popular',
-                    items: [
-                      'Popular',
-                      'Recently posted',
-                      'Top rated',
-                    ].map((String value) {
-                      return DropdownMenuItem<String>(
-                        value: value,
-                        child: Text(value),
-                      );
-                    }).toList(),
-                    onChanged: (value) {},
-                    style: AppTextStyles.smallText,
-                  ),
+            Container(
+              height: 5.h,
+              padding: EdgeInsets.symmetric(horizontal: 2.h),
+              decoration: BoxDecoration(
+                color: Colors.white,
+                border: Border.all(
+                  color: AppColors.greyLight,
+                ),
+                borderRadius: BorderRadius.circular(8),
+              ),
+              child: DropdownButtonHideUnderline(
+              
+                child: DropdownButton<String>(
+                
+                  focusColor: AppColors.white,
+                  dropdownColor: AppColors.white,
+                  value: 'Popular',
+                  items: [
+                    'Popular',
+                    'Recently posted',
+                    'Top rated',
+                  ].map((String value) {
+                    return DropdownMenuItem<String>(
+                      value: value,
+                      child: Text(value),
+                    );
+                  }).toList(),
+                  onChanged: (value) {},
+                  style: AppTextStyles.smallText,
                 ),
               ),
             ),
