@@ -23,53 +23,48 @@ class ReviewWithImages extends StatelessWidget {
         SizedBox(
           height: 8.h,
           child: ListView.separated(
-              shrinkWrap: true,
-              scrollDirection: Axis.horizontal,
-              itemBuilder: (context, index) {
-                return Stack(
-                  children: [
-                    Container(
-                      height: 8.h,
-                      width: 8.h,
-                      decoration: BoxDecoration(
-                        boxShadow: [
-                          BoxShadow(
-                            blurRadius: 10,
-                            color: Colors.black.withOpacity(0.2),
-                            offset: const Offset(0, 10),
-                          )
-                        ],
-                        borderRadius: BorderRadius.circular(8),
+            shrinkWrap: true,
+            scrollDirection: Axis.horizontal,
+            itemBuilder: (context, index) {
+              return Stack(
+                children: [
+                  Container(
+                    height: 8.h,
+                    width: 8.h,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(8),
+                    ),
+                    child: ClipRRect(
+                      child: Image.asset(
+                        model.images[index],
+                        fit: BoxFit.cover,
                       ),
-                      child: ClipRRect(
-                        child: Image.asset(
-                          model.images[index],
-                          fit: BoxFit.cover,
+                    ),
+                  ),
+                  Container(
+                    height: 8.h,
+                    width: 8.h,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(8),
+                      color: Colors.black38,
+                    ),
+                    child: Center(
+                      child: Text(
+                        '132',
+                        style: AppTextStyles.smallText.copyWith(
+                          color: AppColors.white,
                         ),
                       ),
                     ),
-                    Container(
-                      height: 8.h,
-                      width: 8.h,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(8),
-                        color: Colors.black38,
-                      ),
-                      child: Center(
-                        child: Text(
-                          '132',
-                          style: AppTextStyles.smallText.copyWith(
-                            color: AppColors.white,
-                          ),
-                        ),
-                      ),
-                    )
-                  ],
-                );
-              },
-              separatorBuilder: (context, index) => spaceH(6.5.w),
-              itemCount: model.images.length),
-        )
+                  )
+                ],
+              );
+            },
+            separatorBuilder: (context, index) => spaceH(6.5.w),
+            itemCount: model.images.length,
+          ),
+        ),
+        spaceV(3.h),
       ],
     );
   }
