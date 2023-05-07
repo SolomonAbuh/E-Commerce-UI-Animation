@@ -16,6 +16,7 @@ class TopReviews extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -27,7 +28,7 @@ class TopReviews extends StatelessWidget {
                 ),
                 spaceV(2.h),
                 SizedBox(
-                  width: 50.w,
+                  width: 35.w,
                   child: Text(
                     'Showing 3 out of 2.5k+ reviews',
                     style: AppTextStyles.smallTextLight,
@@ -37,7 +38,7 @@ class TopReviews extends StatelessWidget {
             ),
             Container(
               height: 5.h,
-              padding: ,
+              padding: EdgeInsets.symmetric(horizontal: 2.w),
               decoration: BoxDecoration(
                 color: Colors.white,
                 border: Border.all(
@@ -65,6 +66,8 @@ class TopReviews extends StatelessWidget {
                 ),
               ),
             ),
+            spaceV(3.h),
+            L
           ],
         )
       ],
