@@ -26,34 +26,39 @@ class TopReviews extends StatelessWidget {
                       .copyWith(fontWeight: FontWeight.w600),
                 ),
                 spaceV(2.h),
-                Text(
-                  'Showing 3 out of 2.5k+ reviews',
-                  style: AppTextStyles.smallTextLight,
+                SizedBox(
+                  width: 52.w,
+                  child: Text(
+                    'Showing 3 out of 2.5k+ reviews',
+                    style: AppTextStyles.smallTextLight,
+                  ),
                 )
               ],
             ),
-            Expanded(
-              child: Align(
-                alignment: Alignment.centerLeft,
-                child: Container(
-                  height: 5.h,
-                  width: 50.w,
+            Align(
+              alignment: Alignment.centerLeft,
+              child: Container(
+                height: 5.h,
+                decoration: BoxDecoration(
                   color: Colors.white,
-                  margin: const EdgeInsets.only(left: 13),
-                  child: DropdownButtonHideUnderline(
-                    child: DropdownButton<String>(
-                      focusColor: AppColors.white,
-                      dropdownColor: AppColors.white,
-                      value: 'Top 5',
-                      items: ['Top 5', 'Top 10', 'Top 15'].map((String value) {
-                        return DropdownMenuItem<String>(
-                          value: value,
-                          child: Text(value),
-                        );
-                      }).toList(),
-                      onChanged: (value) {},
-                      style: AppTextStyles.smallText,
-                    ),
+                ),
+                child: DropdownButtonHideUnderline(
+                  child: DropdownButton<String>(
+                    focusColor: AppColors.white,
+                    dropdownColor: AppColors.white,
+                    value: 'Popular',
+                    items: [
+                      'Popular',
+                      'Recently posted',
+                      'Top rated',
+                    ].map((String value) {
+                      return DropdownMenuItem<String>(
+                        value: value,
+                        child: Text(value),
+                      );
+                    }).toList(),
+                    onChanged: (value) {},
+                    style: AppTextStyles.smallText,
                   ),
                 ),
               ),
