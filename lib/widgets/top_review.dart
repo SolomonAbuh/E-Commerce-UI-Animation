@@ -27,7 +27,7 @@ class TopReviews extends StatelessWidget {
                 ),
                 spaceV(2.h),
                 SizedBox(
-                  width: 52.w,
+                  width: 40.w,
                   child: Text(
                     'Showing 3 out of 2.5k+ reviews',
                     style: AppTextStyles.smallTextLight,
@@ -39,9 +39,12 @@ class TopReviews extends StatelessWidget {
               alignment: Alignment.centerLeft,
               child: Container(
                 height: 5.h,
+                padding: EdgeInsets.symmetric(horizontal: 2.h),
                 decoration: BoxDecoration(
-                  color: Colors.white,
-                ),
+                    color: Colors.white,
+                    border: Border.all(
+                      color: AppColors.greyLight,
+                    )),
                 child: DropdownButtonHideUnderline(
                   child: DropdownButton<String>(
                     focusColor: AppColors.white,
