@@ -17,7 +17,9 @@ class ReviewWithImages extends StatelessWidget {
       children: [
         Text(
           'Review with images & videos:',
-          style: AppTextStyles.mediumText.copyWith(fontWeight: FontWeight.w600),
+          style: AppTextStyles.mediumText.copyWith(
+            fontWeight: FontWeight.w600,
+          ),
         ),
         spaceV(3.h),
         SizedBox(

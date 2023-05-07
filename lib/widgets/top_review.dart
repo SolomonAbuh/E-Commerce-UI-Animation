@@ -44,7 +44,8 @@ class TopReviews extends StatelessWidget {
                     color: Colors.white,
                     border: Border.all(
                       color: AppColors.greyLight,
-                    )),
+                    ),
+                    borderRadius: BorderRadius.circular(8)),
                 child: DropdownButtonHideUnderline(
                   child: DropdownButton<String>(
                     focusColor: AppColors.white,
