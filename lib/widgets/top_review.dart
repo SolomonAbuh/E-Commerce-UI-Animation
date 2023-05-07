@@ -67,7 +67,7 @@ class TopReviews extends StatelessWidget {
               ),
             ),
             spaceV(3.h),
-            L
+            Column(children: [],)
           ],
         )
       ],
