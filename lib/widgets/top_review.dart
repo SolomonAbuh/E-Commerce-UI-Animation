@@ -121,12 +121,28 @@ class TopReviews extends StatelessWidget {
                         ],
                       ),
                       spaceV(1.h),
-                      Chip(
-                        label: Text('Very fast delivery'),
-                        backgroundColor: Colors.teal.shade100,
-                        shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(20)),
-                      )
+                      SizedBox(
+                          height: 5.h,
+                          
+                          child: ListView(
+                            children: [
+                              Chip(
+                                label: Text(
+                                  'Very fast delivery',
+                                  style: AppTextStyles.verySmallText.copyWith(
+                                    color: AppColors.primary,
+                                  ),
+                                ),
+                                backgroundColor: Colors.teal.shade50,
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(20),
+                                  side: BorderSide(
+                                    color: AppColors.primary,
+                                  ),
+                                ),
+                              ),
+                            ],
+                          )),
                     ],
                   ),
                 ),
