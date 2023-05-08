@@ -121,7 +121,12 @@ class TopReviews extends StatelessWidget {
                         ],
                       ),
                       spaceV(1.h),
-                      Chip(label: Text(''))
+                      Chip(
+                        label: Text('Very fast delivery'),
+                        backgroundColor: Colors.teal.shade100,
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(20)),
+                      )
                     ],
                   ),
                 ),
