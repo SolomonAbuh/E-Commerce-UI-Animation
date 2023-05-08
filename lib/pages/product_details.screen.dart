@@ -5,6 +5,7 @@ import 'package:money_point_take_home_assignment/widgets/product_description.dar
 import 'package:money_point_take_home_assignment/widgets/product_details_pictures.dart';
 import 'package:money_point_take_home_assignment/widgets/product_shipping_info.dart';
 import 'package:money_point_take_home_assignment/widgets/product_title.dart';
+import 'package:money_point_take_home_assignment/widgets/recommedations.dart';
 import 'package:money_point_take_home_assignment/widgets/review_and_ratings.dart';
 import 'package:sizer/sizer.dart';
 import '../constants/colors.dart';
@@ -65,7 +66,11 @@ class ProductDetailsScreen extends StatelessWidget {
                     ReviewWithImages(model: model),
                     Divider(height: 5.h, color: AppColors.greyLight),
                     const TopReviews(),
-                    const PaginationBar()
+                    spaceV(1.5.h),
+                    const PaginationBar(),
+                    spaceV(5.h),
+                    const Recomendations(),
+                    spaceV(3.5.h),
                   ],
                 ),
               ),
