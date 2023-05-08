@@ -73,11 +73,11 @@ class TopReviews extends StatelessWidget {
         spaceV(3.h),
         Column(
           children: List.generate(
-            5,
+            3,
             (index) => Column(
               children: [
-                Container(
-                  height: 30.h,
+                SizedBox(
+                  height: 28.h,
                   child: Column(
                     children: [
                       Row(
@@ -104,7 +104,7 @@ class TopReviews extends StatelessWidget {
                           ),
                           Row(
                             children: [
-                              Icon(
+                              const Icon(
                                 Icons.star_rounded,
                                 color: Colors.amber,
                               ),
@@ -187,13 +187,34 @@ class TopReviews extends StatelessWidget {
                         'According to my expectations. This is the best.\nThank you',
                         style: AppTextStyles.smallText,
                       ),
+                      const Spacer(),
                       Row(
-                        children: [Icon(Icons.thumb_up_sharp)],
+                        children: [
+                          Icon(
+                            Icons.thumb_up_rounded,
+                            color: AppColors.primary,
+                          ),
+                          spaceH(2.w),
+                          Text(
+                            'Helpful?',
+                            style: AppTextStyles.verySmallText.copyWith(
+                                color: AppColors.primary,
+                                fontWeight: FontWeight.w600),
+                          ),
+                          const Spacer(),
+                          Text(
+                            'Yesterday',
+                            style: AppTextStyles.verySmallTextLight,
+                          ),
+                        ],
                       )
                     ],
                   ),
                 ),
-                spaceV(2.h),
+                Divider(
+                  height: 5.h,
+                  color: AppColors.greyLight,
+                ),
               ],
             ),
           ),
