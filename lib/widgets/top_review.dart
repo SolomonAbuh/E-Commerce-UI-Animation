@@ -77,7 +77,7 @@ class TopReviews extends StatelessWidget {
             (index) => Column(
               children: [
                 Container(
-                  height: 20.h,
+                  height: 30.h,
                   child: Column(
                     children: [
                       Row(
@@ -129,7 +129,8 @@ class TopReviews extends StatelessWidget {
                               Chip(
                                 label: Text(
                                   'Very fast delivery',
-                                  style: AppTextStyles.verySmallText.copyWith(
+                                  style: TextStyle(
+                                    fontSize: 8.sp,
                                     color: AppColors.primary,
                                   ),
                                 ),
@@ -145,7 +146,7 @@ class TopReviews extends StatelessWidget {
                               Chip(
                                 label: Text(
                                   'Packaged properly',
-                                  style: AppTextStyles.verySmallText.copyWith(
+                                  style: TextStyle(
                                     fontSize: 8.sp,
                                     color: AppColors.primary,
                                   ),
@@ -162,7 +163,8 @@ class TopReviews extends StatelessWidget {
                               Chip(
                                 label: Text(
                                   'Product in good condition',
-                                  style: AppTextStyles.verySmallText.copyWith(
+                                  style: TextStyle(
+                                    fontSize: 8.sp,
                                     color: AppColors.primary,
                                   ),
                                 ),
@@ -176,6 +178,11 @@ class TopReviews extends StatelessWidget {
                               ),
                             ],
                           )),
+                      spaceV(3.h),
+                      Text(
+                        'According to my expectations. This is the best.\nThank you',
+                        style: AppTextStyles.smallText.copyWith(),
+                      )
                     ],
                   ),
                 ),
