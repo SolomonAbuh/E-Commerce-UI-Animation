@@ -45,14 +45,7 @@ class HomeAdOnIcons extends StatelessWidget {
                       fit: BoxFit.fitHeight,
                       color: Colors.blueGrey.shade400,
                     ),
-                  )
-                      .animate(
-                        delay: Duration(
-                          milliseconds: 400 * index,
-                        ),
-                      )
-                      .fadeIn()
-                      .slideX(curve: Curves.easeOut),
+                  ),
                   spaceV(2.h),
                   Text(
                     (tabItems[index].title),

@@ -8,6 +8,7 @@ import 'package:money_point_take_home_assignment/widgets/product_card.dart';
 import 'package:sizer/sizer.dart';
 
 import '../constants/colors.dart';
+import '../pages/product_details.screen.dart';
 
 class Recomendations extends StatelessWidget {
   const Recomendations({super.key});
@@ -38,9 +39,17 @@ class Recomendations extends StatelessWidget {
               scrollDirection: Axis.horizontal,
               itemBuilder: (context, index) => SizedBox(
                   width: 50.w,
-                  child: ProductCard(onTap: () {
-                    
-                  }, model: productList[index])),
+                  child: ProductCard(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) =>
+                                ProductDetailsScreen(model: productList[index]),
+                          ),
+                        );
+                      },
+                      model: productList[index])),
               separatorBuilder: (context, index) => spaceH(5.w),
               itemCount: productList.length),
         )
