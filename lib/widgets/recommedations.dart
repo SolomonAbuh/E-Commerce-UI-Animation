@@ -2,7 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:money_point_take_home_assignment/constants/text_styles.dart';
+import 'package:money_point_take_home_assignment/data/local_data.dart';
 import 'package:money_point_take_home_assignment/widgets/app_spacer.dart';
+import 'package:money_point_take_home_assignment/widgets/product_card.dart';
+import 'package:sizer/sizer.dart';
 
 import '../constants/colors.dart';
 
@@ -28,7 +31,19 @@ class Recomendations extends StatelessWidget {
             )
           ],
         ),
-        spaceV(3.5.h),),
+        spaceV(3.5.h),
+        SizedBox(
+          height: 30.h,
+          child: ListView.separated(
+              scrollDirection: Axis.horizontal,
+              itemBuilder: (context, index) => SizedBox(
+                  width: 50.w,
+                  child: ProductCard(onTap: () {
+                    
+                  }, model: productList[index])),
+              separatorBuilder: (context, index) => spaceH(5.w),
+              itemCount: productList.length),
+        )
       ],
     );
   }
