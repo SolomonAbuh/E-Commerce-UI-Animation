@@ -95,7 +95,11 @@ class TopReviews extends StatelessWidget {
                                 )),
                               ),
                               spaceH(2.w),
-                              Text('Solomon Abuh ****')
+                              Text(
+                                'Solomon Abuh ****',
+                                style: AppTextStyles.smallText
+                                    .copyWith(fontWeight: FontWeight.w600),
+                              ),
                             ],
                           ),
                           Row(
@@ -181,7 +185,10 @@ class TopReviews extends StatelessWidget {
                       spaceV(3.h),
                       Text(
                         'According to my expectations. This is the best.\nThank you',
-                        style: AppTextStyles.smallText.copyWith(),
+                        style: AppTextStyles.smallText,
+                      ),
+                      Row(
+                        children: [Icon(Icons.thumb_up_sharp)],
                       )
                     ],
                   ),
