@@ -219,39 +219,7 @@ class TopReviews extends StatelessWidget {
             ),
           ),
         ),
-        Row(
-          children: [
-            Container(
-              padding: EdgeInsets.all(1.h),
-              decoration: BoxDecoration(
-                  color: AppColors.greyLight.withOpacity(0.5),
-                  shape: BoxShape.circle),
-              child: const Icon(Icons.chevron_left),
-            ),
-            Text(
-              '1',
-              style: AppTextStyles.smallText,
-            ),
-            space
-            Text(
-              '1',
-              style: AppTextStyles.smallText,
-            ),
-            space
-            Text(
-              '1',
-              style: AppTextStyles.smallText,
-            ),
-            space
-            Container(
-              padding: EdgeInsets.all(1.h),
-              decoration: BoxDecoration(
-                  color: AppColors.greyLight.withOpacity(0.5),
-                  shape: BoxShape.circle),
-              child: const Icon(Icons.chevron_right),
-            )
-          ],
-        )
+       
       ],
     );
   }

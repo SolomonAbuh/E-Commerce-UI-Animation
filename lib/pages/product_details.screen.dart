@@ -10,6 +10,7 @@ import 'package:sizer/sizer.dart';
 import '../constants/colors.dart';
 import '../widgets/about_items.dart';
 import '../widgets/bottom_summary.dart';
+import '../widgets/pagination_bar.dart';
 import '../widgets/product_details_app_bar.dart';
 import '../widgets/product_details_tab_bar.dart';
 import '../widgets/product_shop_info.dart';
@@ -64,6 +65,7 @@ class ProductDetailsScreen extends StatelessWidget {
                     ReviewWithImages(model: model),
                     Divider(height: 5.h, color: AppColors.greyLight),
                     const TopReviews(),
+                    const PaginationBar()
                   ],
                 ),
               ),
