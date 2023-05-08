@@ -123,12 +123,45 @@ class TopReviews extends StatelessWidget {
                       spaceV(1.h),
                       SizedBox(
                           height: 5.h,
-                          
                           child: ListView(
+                            scrollDirection: Axis.horizontal,
                             children: [
                               Chip(
                                 label: Text(
                                   'Very fast delivery',
+                                  style: AppTextStyles.verySmallText.copyWith(
+                                    color: AppColors.primary,
+                                  ),
+                                ),
+                                backgroundColor: Colors.teal.shade50,
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(20),
+                                  side: BorderSide(
+                                    color: AppColors.primary,
+                                  ),
+                                ),
+                              ),
+                              spaceH(4.w),
+                              Chip(
+                                label: Text(
+                                  'Packaged properly',
+                                  style: AppTextStyles.verySmallText.copyWith(
+                                    fontSize: 8.sp,
+                                    color: AppColors.primary,
+                                  ),
+                                ),
+                                backgroundColor: Colors.teal.shade50,
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(20),
+                                  side: BorderSide(
+                                    color: AppColors.primary,
+                                  ),
+                                ),
+                              ),
+                              spaceH(4.w),
+                              Chip(
+                                label: Text(
+                                  'Product in good condition',
                                   style: AppTextStyles.verySmallText.copyWith(
                                     color: AppColors.primary,
                                   ),
