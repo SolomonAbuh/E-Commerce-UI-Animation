@@ -1,4 +1,4 @@
-# money_point_take_home_assignment
+# E-Commerce UI animation
 
 A preview of the app
 
